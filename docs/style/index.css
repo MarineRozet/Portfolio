@@ -1,304 +1,396 @@
-/* RESET */
+/* ===== RESET GLOBAL ===== */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin: 0; /* Supprime les marges par défaut */
+  padding: 0; /* Supprime les espacements internes */
+  box-sizing: border-box; /* Facilite les calculs de taille */
 }
 
+/* ===== STYLES GÉNÉRAUX ===== */
 body {
-  font-family: 'Manrope', sans-serif;
-  font-size: 1em;
-  background-color: #1f2039;
+  font-family: 'Manrope', sans-serif; /* Police générale du site */
+  font-size: 1em; /* Taille de texte de base */
+  background-color: #1f2039; /* Fond bleu foncé */
 }
 
-/* TYPOGRAPHIE */
+nav a.active {
+  font-weight: bold; /* Met en gras le lien actif */
+  color: #a5b4fc; /* couleur douce ou personnalisée */
+}
+
+
+/* ===== TITRES ET TEXTE ===== */
 h1 {
-  font-size: 3.5em;
-  color: #a5b4fc;
-  font-family: 'Montserrat', sans-serif;
+  font-size: 3.5em; /* Très grand titre */
+  color: #a5b4fc; /* Couleur lavande douce */
+  font-family: 'Montserrat', sans-serif; /* Police différente pour les titres */
 }
 
 h2 {
-  color: #f9f8ff;
+  color: #f9f8ff; /* Blanc cassé pour les sous-titres */
 }
 
 p,
 li {
-  font-size: 1.1em;
+  font-size: 1.1em; /* Texte lisible */
   color: #f9f8ff;
 }
 
 a {
-  color: #242424;
-  text-decoration: none;
+  color: #242424; /* Lien foncé */
+  text-decoration: none; /* Pas de soulignement par défaut */
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Soulignement au survol */
 }
 
 em {
-  color: #a5b4fc;
+  color: #a5b4fc; /* Met en valeur les éléments */
   font-style: normal;
 }
 
-/* BOUTON */
+/* ===== BOUTON PRINCIPAL ===== */
 .cta {
   display: inline-block;
-  background: linear-gradient(#8e86b5, #acaeed);
+  background: linear-gradient(#8e86b5, #acaeed); /* Dégradé lavande */
   color: white;
-  border-radius: 50px;
-  padding: 20px 30px;
+  border-radius: 50px; /* Forme arrondie */
+  padding: 0.5em 1.5em; /* Espacement interne */
+  font-size: 1em; /* Taille du texte dans le bouton */
+  margin-bottom: 2em; /* Espacement sous le bouton */
 }
 
 .cta:hover {
-  background: linear-gradient(#181044, #2d2d3b);
+  background: linear-gradient(#181044, #2d2d3b); /* Changement de couleur au survol */
   text-decoration: none;
 }
 
-/* HEADER & FOOTER */
+/* ===== HEADER & FOOTER ===== */
 header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: white;
-  z-index: 1000;
-  padding: 1rem 2rem;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* optionnel, pour un petit effet d’ombre */
+  position: fixed; /* Fixe le header en haut */
+  top: 0; /* En haut de la page */
+  width: 100%; /* S'étend sur toute la largeur */
+  background-color: white; /* Fond blanc */
+  z-index: 1000; /* Placer au-dessus du reste */
+  padding: 1em 2em; /* Espacement interne */
+
+}
+
+.Logofooter {
+  max-height: 50px; /* Ajuste la taille de l'image */
+  height: 100%; /* S'adapte à la hauteur du header */
+}
+
+.Logoheader {
+  max-height: 50px; /* Ajuste la taille de l'image */
+  height: 100%; /* S'adapte à la hauteur du header */
 }
 
 footer {
-  background-color: #03041b;
-  padding: 20px 50px;
+  background-color: #03041b; /* Fond foncé pour le footer */
+  padding: 1em 2em; /* Espacement interne */
+  bottom: 0; /* Fixe le footer en bas */
+  width: 100%; /* S'étend sur toute la largeur */
 }
 
+/* ===== NAVIGATION ===== */
 footer,
 nav {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+  display: flex; /* Utilisation de flexbox pour une disposition souple */
+  flex-direction: row; /* Disposition horizontale des éléments */
+  align-items: center; /* Centrage vertical des éléments */
+  justify-content: space-between; /* Espacement entre les éléments */
 }
 
 nav a {
-  margin-left: 30px;
+  margin-left: 1.8em; /* Espacement entre les liens */
 }
 
 .lien-icone {
-  margin-left: 10px;
+  margin-left: 0.1em; /* Espacement spécifique pour les icônes */
 }
 
 .lien-icone:hover {
-  opacity: 0.7;
+  opacity: 0.7; /* Effet de transparence au survol */
 }
 
-/* SECTIONS GÉNÉRALES */
+/* ===== SECTIONS GÉNÉRALES ===== */
 section {
-  padding: 80px;
+  padding: 0.8em; /* Espacement interne des sections */
 }
 
-/* ACCUEIL - INTRODUCTION */
+/* ===== ACCUEIL - INTRODUCTION ===== */
 .accueil-introduction {
-  display: flex;
-  flex-direction: row;
-  max-width: 1300px;
-  align-items: flex-start;
-  margin: auto;
-  margin-top: 60px;
+  display: flex; /* Utilisation de flexbox */
+  flex-direction: row; /* Alignement horizontal des éléments */
+  max-width: 1300px; /* Largeur maximale de la section */
+  align-items: flex-start; /* Aligne les éléments en haut */
+  margin: auto; /* Centrage horizontal */
+  margin-top: 3em; /* Espacement supérieur */
+  margin-bottom: 1em; /* Espacement inférieur */
+  width: 100%; /* S'étend sur toute la largeur */
 }
 
 .accueil-introduction div {
-  padding-right: 50px; /* Moins d'espace à droite */
+  padding-right: 1em; /* Espacement à droite */
 }
 
 .accueil-introduction h1 {
-  margin-bottom: 15px;
+  margin-top: 1.5em; /* Espacement au-dessus du titre */
+  font-size: 3.5em; /* Taille du titre */
+  margin-bottom: 0.5em; /* Espacement sous le titre */
 }
 
 .accueil-introduction p {
-  margin-bottom: 30px;
+  margin-bottom: 1.5em; /* Espacement sous le paragraphe */
+  margin-right: 2em; /* Espacement à droite */
 }
 
 .accueil-introduction img {
-  width: 350px;
-  height: 350px;
-  object-fit: cover;
-  margin-top: 30px;
-  border-radius: 10px;
+  max-width: 300px; /* Taille de l'image */
+  width: 100%; /* S'adapte à la largeur de l'écran */
+  max-width: 300px; /* Limite la largeur maximale */
+  height: 100%; /* Hauteur de l'image */
+  object-fit: cover; /* Garder les proportions de l'image */
+  margin-top: 3.5em; /* Espacement au-dessus de l'image */
+  border-radius: 10px; /* Coins arrondis */
 }
 
-/* SECTION CONTACT */
+/* ===== ACCUEIL - CAMPAGNES ===== */
+.accueil-campagnes {
+  background-color: #eef0f3; /* Fond blanc */
+  padding: 3em 5%; /* Espacement interne */
+  margin: 0; /* Pas de marge externe */
+  width: 100%; /* Largeur complète */
+  display: flex; /* Flexbox pour la disposition */
+  align-items: center; /* Centrage vertical */
+  justify-content: center; /* Centrage horizontal */
+  gap: 0; /* Réduit l'écart global */
+  flex-wrap: wrap; /* Permet aux éléments de passer à la ligne */
+  flex-direction: row-reverse; /* Inverse l'ordre des éléments */
+}
+
+.textcontainer {
+  flex: 1; /* Chaque section occupe un espace flexible */
+  width: 100%; /* S'étend sur toute la largeur */
+  max-width: 3000px; /* Largeur maximale */
+  text-align: left; /* Aligne le texte à gauche */
+}
+
+.textcontainer h1 {
+  font-size: 3em; /* Taille du titre */
+  margin-bottom: 0.2em; /* Espacement sous le titre */
+  color: #1f2039; /* Couleur du texte */
+}
+
+.textcontainer p {
+  font-size: 1.2em; /* Taille du texte */
+  color: #1f2039; /* Couleur du texte */
+  margin-bottom: 0.2em; /* Espacement sous le texte */
+}
+
+.textcontainer .cta {
+  margin-top: 0.2em;
+  display: block; /* Le bouton devient un bloc */
+  width: fit-content; /* La largeur du bouton s'adapte au contenu */
+  margin-left: auto; /* Centrer le bouton */
+  margin-right: auto;
+}
+
+.video-container {
+  flex: 1; /* Même principe que pour .textcontainer */
+  max-width: 1000px; /* Largeur minimale */
+  width: 100%; /* S'étend sur toute la largeur */
+  padding: 0; /* Supprimer tout padding */
+  margin-top: 0.1em; /* Réduit l'espace sous la vidéo */
+}
+
+.video-container video {
+  width: 80%; /* Largeur maximale à 80% */
+  height: auto; /* Laisse la hauteur s'adapter */
+  max-width: 100%; /* Pas plus large que l'écran */
+  max-height: 400px; /* Hauteur maximale */
+  display: block; /* Le vidéo s'affiche comme un bloc */
+  border: none; /* Pas de bordure */
+  border-radius: 10px; /* Coins arrondis */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Ombre autour de la vidéo */
+}
+
+.accueil-campagnes .cta {
+  margin-top: 0.5em; /* Espacement au-dessus du bouton */
+  display: inline-block; /* Le bouton reste inline */
+  margin-left: 0; /* Enlève l'espace à gauche */
+}
+
+/* ===== SECTION CONTACT ===== */
 .section-contact h2 {
-  color: #a5b4fc;
-  text-align: center;
-  margin-bottom: 50px;
+  color: #a5b4fc; /* Couleur spécifique pour les titres */
+  text-align: center; /* Centrer le titre */
+  margin-bottom: 2.5em; /* Espacement sous le titre */
+  margin-top: 2.5em; /* Espacement au-dessus du titre */
 }
 
 form {
-  display: flex;
-  flex-direction: column;
-  max-width: 1000px;
-  margin: auto;
-  color: white;
+  display: flex; /* Flexbox pour la disposition des éléments */
+  flex-direction: column; /* Empile les éléments verticalement */
+  max-width: 1000px; /* Largeur maximale du formulaire */
+  width: 100%; /* S'étend sur toute la largeur */
+  max-height: 500px; /* Hauteur maximale */
+  height: 100%; /* S'étend sur toute la hauteur */
+  margin: auto; /* Centrage horizontal */
+  color: white; /* Texte en blanc */
 }
 
 .form-nom-email {
-  display: flex;
+  display: flex; /* Disposition en ligne pour les champs de formulaire */
   flex-direction: row;
-  gap: 20px;
+  gap: 20px; /* Espacement entre les champs */
 }
 
 .form-column {
-  flex: 1;
+  flex: 1; /* Chaque colonne occupe la même largeur */
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Les éléments dans chaque colonne sont empilés */
   margin-bottom: 20px;
 }
 
 input,
 textarea {
-  padding: 15px;
-  border-radius: 3px;
-  border: none;
+  padding: 15px; /* Espacement interne des champs */
+  border-radius: 3px; /* Coins arrondis */
+  border: none; /* Supprime la bordure */
 }
 
 label {
-  margin-bottom: 10px;
+  margin-bottom: 10px; /* Espacement sous le label */
 }
 
 input[type='submit'] {
-  width: 200px;
-  margin: auto;
-  margin-top: 30px;
+  width: 200px; /* Largeur spécifique pour le bouton de soumission */
+  margin: auto; /* Centrer le bouton */
+  margin-top: 30px; /* Espacement au-dessus du bouton */
 }
 
-/* ACCUEIL - CAMPAGNES */
-.accueil-campagnes {
-  background-color: #ffffff;
-  padding: 60px 5%;
-  margin: 0;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0; /* Réduit l'écart global */
-  flex-wrap: wrap;
-  flex-direction: row-reverse;
+/* BOUTON RETOUR EN HAUT */
+.back-to-top {
+  position: fixed; /* Fixe le bouton en bas à droite */
+  bottom: 20px; /* Position verticale */
+  right: 20px; /* Position horizontale */
+  background: #a5b4fc; /* Couleur de fond */
+  color: white; /* Couleur du texte */
+  padding: 10px 15px; /* Espacement interne */
+  border-radius: 50%; /* Forme arrondie */
+  font-size: 20px; /* Taille du texte */
+  text-decoration: none; /* Pas de soulignement */
+  z-index: 999; /* Placer au-dessus des autres éléments */
+  transition: background 0.3s; /* Transition douce pour le changement de couleur */
 }
 
-.textcontainer {
-  flex: 1;
-  min-width: 300px;
-  text-align: left;
+.back-to-top:hover {
+  background: #8788ba; /* Couleur au survol */
+  text-decoration: none; /* Pas de soulignement au survol */
 }
 
-.textcontainer h1 {
-  font-size: 3em;
-  margin-bottom: 20px;
-  color: #1f2039;
+.copyright {
+  color: white; /* Couleur du texte */
+  text-align: center; /* Centrer le texte */
+  margin-top: 3em; /* Espacement au-dessus du texte */
+  margin-right: 42%; /* Espacement à droite */
+  font-size: 0.8em; /* Taille du texte */
+  display: flex; /* Active flexbox */
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
 }
 
-.textcontainer p {
-  font-size: 1.2em;
-  color: #1f2039;
-  margin-bottom: 20px; /* Réduit l'écart entre le texte et le bouton */
-}
+/* ======= RESPONSIVE DESIGN ======= */
 
-.textcontainer .cta {
-  margin-top: 20px;
-  display: block;
-  width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.video-container {
-  flex: 1;
-  min-width: 300px;
-  padding: 0;
-  margin-top: 10px; /* Réduit l'espace sous la vidéo */
-}
-
-.video-container video {
-  width: 80%;
-  height: auto;
-  max-width: 100%;
-  max-height: 400px;
-  display: block;
-  border: none;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.accueil-campagnes .cta {
-  margin-top: 20px;
-  display: inline-block;
-  margin-left: 0;
-}
-
-/* LOGOS */
-.Logofooter,
-.Logoheader {
-  max-width: 100%;
-  height: 45px;
-  display: block;
-  object-fit: contain;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-/* RESPONSIVE */
-@media screen and (max-width: 996px) {
-  header nav {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  header nav img {
-    margin-bottom: 20px;
-  }
-
-  header,
-  footer {
-    padding: 100px 100px;
+/* 📱 Mobile - Portrait (jusqu'à 480px) */
+@media (max-width: 30em) {
+  body {
+    font-size: 0.5em;
   }
 
   h1 {
-    font-size: 2em;
+    font-size: 0.5em;
   }
 
-  section {
-    padding: 50px 20px;
+  .cta {
+    padding: 0.4em 1em;
   }
 
-  nav a {
-    margin-left: 10px;
-    margin-right: 10px;
+  .Logoheader,
+  .Logofooter {
+    max-height: 30px;
+    height: 100%;
   }
 
   .accueil-introduction {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    flex-direction: row;
+    margin-top: 2em;
+  }
+
+  .accueil-introduction h1 {
+    margin-top: 1em;
+    margin-bottom: 0.2em;
+    font-size: 3em;
+  }
+
+  .accueil-introduction p {
+    font-size: 1em;
+    margin-right: 1em;
   }
 
   .accueil-introduction div {
     padding-right: 0;
-    text-align: center;
-    order: 2;
   }
 
   .accueil-introduction img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    order: 1;
+    width: 15em;
+    height: 15em;
+    margin-top: 10em;
+  }
+
+  .accueil-campagnes {
+    flex-direction: column;
+    padding: 2em 1em;
+  }
+
+  .textcontainer {
+    text-align: center;
+    padding: 1em 2em;
+  }
+
+  .textcontainer h1 {
+    font-size: 3em;
+  }
+
+  .textcontainer p {
+    font-size: 1.5em;
+  }
+
+  .textcontainer .cta {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .video-container {
+    margin-top: 2em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .video-container video {
+    width: 100%;
+    max-height: 250px;
   }
 
   .section-contact {
-    padding: 50px 20px;
+    padding: 2em 1em;
+  }
+
+  form {
+    max-width: 100%;
   }
 
   .form-nom-email {
@@ -306,49 +398,160 @@ input[type='submit'] {
     gap: 0;
   }
 
-  .accueil-campagnes {
-    flex-direction: column;
-    padding: 50px 20px;
+  .form-column {
+    margin-bottom: 1em;
   }
 
-  .textcontainer,
-  .video-container {
+  input,
+  textarea {
+    font-size: 1em;
+    padding: 1em;
+  }
+
+  input[type='submit'] {
     width: 100%;
+    margin-top: 2em;
+    font-size: 1em;
+  }
+
+  .back-to-top {
+    bottom: 10px;
+    right: 10px;
+    font-size: 1.2em;
+    padding: 0.8em 1em;
+  }
+
+  .copyright {
+    font-size: 0.7em;
+    margin: auto;
+    flex-direction: column;
     text-align: center;
+  }
+}
+
+/* 📱 Tablette - Portrait (jusqu'à 768px) */
+@media (max-width: 48em) {
+  body {
+    font-size: 0.5em;
+  }
+
+  h1 {
+    font-size: 0.5em;
+  }
+
+  .cta {
+    padding: 0.4em 1em;
+  }
+
+  .Logoheader,
+  .Logofooter {
+    max-height: 30px;
+    height: 100%;
+  }
+
+  .accueil-introduction {
+    flex-direction: row;
+    margin-top: 2em;
+  }
+
+  .accueil-introduction h1 {
+    margin-top: 1em;
+    margin-bottom: 0.2em;
+    font-size: 3em;
+  }
+
+  .accueil-introduction p {
+    font-size: 1em;
+    margin-right: 1em;
+  }
+
+  .accueil-introduction div {
+    padding-right: 0;
+  }
+
+  .accueil-introduction img {
+    width: 15em;
+    height: 15em;
+    margin-top: 10em;
+  }
+
+  .accueil-campagnes {
+    flex-direction: column;
+    padding: 2em 1em;
+  }
+
+  .textcontainer {
+    text-align: center;
+    padding: 1em 2em;
+  }
+
+  .textcontainer h1 {
+    font-size: 3em;
+  }
+
+  .textcontainer p {
+    font-size: 1.5em;
+  }
+
+  .textcontainer .cta {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .video-container {
+    margin-top: 2em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
   .video-container video {
-    max-height: 300px;
+    width: 100%;
+    max-height: 250px;
+  }
+
+  .section-contact {
+    padding: 2em 1em;
+  }
+
+  form {
+    max-width: 100%;
+  }
+
+  .form-nom-email {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .form-column {
+    margin-bottom: 1em;
+  }
+
+  input,
+  textarea {
+    font-size: 1em;
+    padding: 1em;
+  }
+
+  input[type='submit'] {
+    width: 100%;
+    margin-top: 2em;
+    font-size: 1em;
+  }
+
+  .back-to-top {
+    bottom: 10px;
+    right: 10px;
+    font-size: 1.2em;
+    padding: 0.8em 1em;
+  }
+
+  .copyright {
+    font-size: 0.7em;
+    margin-right: 38%;
+    margin-top: 2em;
+    flex-direction: column;
+    text-align: center;
   }
 }
 
-/* BACK TO TOP BUTTON */
-.back-to-top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #a5b4fc;
-  color: white;
-  padding: 10px 15px;
-  border-radius: 50%;
-  font-size: 20px;
-  text-decoration: none;
-  z-index: 999;
-  transition: background 0.3s;
-}
-
-.back-to-top:hover {
-  background: #8788ba;
-}
-
-.copy {
-  color: #f9f8ff;
-  text-align: center;
-  margin-top: 20px;
-  font-size: 0.9em;
-}
-
-nav a.active {
-  font-weight: bold;
-  color: #a5b4fc; /* couleur douce ou personnalisée */
-}
