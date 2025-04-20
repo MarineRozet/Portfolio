@@ -1,188 +1,238 @@
 /* RESET */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin: 0; /* Supprime les marges par défaut */
+  padding: 0; /* Supprime les espacements par défaut */
+  box-sizing: border-box; /* Assure que le padding et la bordure sont inclus dans la largeur totale de l'élément */
 }
 
 /* BASE */
 body {
-  font-family: 'Manrope', sans-serif;
-  font-size: 1em;
-  background-color: #1f2039;
-  color: #f9f8ff;
+  font-family: 'Manrope', sans-serif; /* Police de caractères Manrope */
+  font-size: 1em; /* Taille de police par défaut */
+  background-color: #1f2039; /* Couleur de fond sombre */
+  color: #f9f8ff; /* Couleur de texte claire */
 }
 
 /* TYPOGRAPHIE */
 h1 {
-  font-size: 3.5em;
-  color: #a5b4fc;
-  font-family: 'Montserrat', sans-serif;
-  margin-bottom: 20px;
-}
+  font-size: 3.5em; /* Taille de police pour le titre principal */
+  color: #a5b4fc; /* Couleur douce ou personnalisée */
+  font-family: 'Montserrat', sans-serif; /* Police de caractères Montserrat */
+  margin-bottom: 20px; /* Marge inférieure pour espacer du texte suivant */
+}     
 
 h2 {
-  font-size: 2em;
-  color: #a5b4fc;
-  margin-top: 40px;
-  margin-bottom: 15px;
+  font-size: 2em; /* Taille de police pour les sous-titres */
+  color: #a5b4fc; /* Couleur douce ou personnalisée */
+  margin-top: 40px; /* Marge supérieure pour espacer du texte précédent */
+  margin-bottom: 15px; /* Marge inférieure pour espacer du texte suivant */
 }
 
 p,
 li {
-  font-size: 1.1em;
-  line-height: 1.6;
-  color: #f9f8ff;
+  font-size: 1.1em; /* Taille de police pour les paragraphes et les listes */
+  line-height: 1.6; /* Hauteur de ligne pour améliorer la lisibilité */
+  color: #f9f8ff; /* Couleur de texte claire */
 }
 
 a {
-  color: #242424;
-  text-decoration: none;
+  color: #242424; /* Couleur des liens */
+  text-decoration: none; /* Supprime le soulignement par défaut des liens */
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Souligne le lien au survol */
 }
 
 em {
-  color: #a5b4fc;
-  font-style: normal;
+  color: #a5b4fc;   /* Couleur douce ou personnalisée pour le texte en italique */
+  font-style: normal; /* Supprime l'italique par défaut */
 }
 
 /* BOUTON */
 .cta {
-  display: inline-block;
-  background: linear-gradient(#8e86b5, #acaeed);
-  color: white;
-  border-radius: 50px;
-  padding: 15px 30px;
-  font-weight: bold;
-  transition: background 0.3s ease;
+  display: inline-block; /* Affiche le bouton en tant qu'élément en ligne avec des propriétés de bloc */
+  background: linear-gradient(#8e86b5, #acaeed); /* Dégradé de couleur pour le fond du bouton */
+  color: white; /* Couleur du texte du bouton */
+  border-radius: 50px; /* Coins arrondis du bouton */
+  padding: 15px 30px; /* Espacement interne du bouton */
+  font-weight: bold; /* Gras pour le texte du bouton */
+  transition: background 0.3s ease; /* Transition douce pour le changement de couleur */
 }
 
 .cta:hover {
-  background: linear-gradient(#181044, #2d2d3b);
-  text-decoration: none;
+  background: linear-gradient(#181044, #2d2d3b); /* Changement de couleur au survol */
+  text-decoration: none; /* Supprime le soulignement au survol */
 }
 
 .cta-wrapper {
-  text-align: center;
-  margin-bottom: 80px;
+  text-align: center; /* Centre le bouton dans son conteneur */
+  margin-bottom: 80px; /* Marge inférieure pour espacer du contenu suivant */
 }
 
-/* HEADER & FOOTER */
+/* ===== HEADER & FOOTER ===== */
 header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: white;
-  z-index: 1000;
-  padding: 1rem 2rem;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed; /* Fixe le header en haut */
+  top: 0; /* En haut de la page */
+  width: 100%; /* S'étend sur toute la largeur */
+  background-color: white; /* Fond blanc */
+  z-index: 1000; /* Placer au-dessus du reste */
+  padding: 1em 2em; /* Espacement interne */
+
+}
+
+.menu-deroulant {
+  position: relative; /* Position relative pour le menu déroulant */
+  display: inline-block; /* Affichage en ligne */
+}
+
+.menu-deroulant .sous-menu {
+  display: none; /* Masque le sous-menu par défaut */
+  position: absolute; /* Position absolue pour le sous-menu */
+  background-color: white; /* Fond blanc */
+  min-width: 180px; /* Largeur minimale du sous-menu */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Ombre portée */
+  z-index: 1000; /* Placer au-dessus des autres éléments */
+}
+
+.menu-deroulant .sous-menu a {
+  display: block; /* Affichage en bloc pour les liens du sous-menu */
+  padding: 10px 15px; /* Espacement interne */
+  text-decoration: none;  /* Pas de soulignement */
+  color: #333; /* Couleur du texte */
+}
+
+.menu-deroulant .sous-menu a:hover {
+  background-color: #f1f1f1; /* Fond gris clair au survol */
+}
+
+.menu-deroulant:hover .sous-menu {
+  display: block; /* Affiche le sous-menu au survol */
+}
+
+
+.Logofooter {
+  max-height: 50px; /* Ajuste la taille de l'image */
+  height: 100%; /* S'adapte à la hauteur du header */
+}
+
+.Logoheader {
+  max-height: 50px; /* Ajuste la taille de l'image */
+  height: 100%; /* S'adapte à la hauteur du header */
 }
 
 footer {
-  background-color: #03041b;
-  padding: 20px 50px;
+  background-color: #03041b; /* Fond foncé pour le footer */
+  padding: 1em 2em; /* Espacement interne */
+  bottom: 0; /* Fixe le footer en bas */
+  width: 100%; /* S'étend sur toute la largeur */
+  max-height: 80px; /* Ajuste la hauteur maximale */
+  height: 100%; /* S'étend sur toute la hauteur */
 }
 
-nav,
-footer {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+/* ===== NAVIGATION ===== */
+footer,
+nav {
+  display: flex; /* Utilisation de flexbox pour une disposition souple */
+  flex-direction: row; /* Disposition horizontale des éléments */
+  align-items: center; /* Centrage vertical des éléments */
+  justify-content: space-between; /* Espacement entre les éléments */
 }
 
 nav a {
-  margin-left: 30px;
-  font-weight: normal;
+  margin-right: 2em; /* Espacement à droite des liens */
+  margin-left: 2em; /* Espacement à gauche des liens */
 }
 
 .lien-icone {
-  margin-left: 10px;
+  margin-left: 0.1em; /* Espacement spécifique pour les icônes */
 }
 
 .lien-icone:hover {
-  opacity: 0.7;
+  opacity: 0.7; /* Effet de transparence au survol */
 }
 
-.Logofooter,
-.Logoheader {
-  max-width: 100%;
-  height: 45px;
-  display: block;
-  object-fit: contain;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+/* ===== SECTIONS GÉNÉRALES ===== */
+section {
+  padding: 0.8em; /* Espacement interne des sections */
 }
 
 /* CONTENU GÉNÉRAL */
 main {
-  padding-top: 120px;
+  padding-top: 120px; /* Espacement supérieur pour éviter que le contenu ne soit masqué par le header fixe */
 }
 
 /* SECTION INTRO (image + texte côte à côte) */
 .a-propos-intro {
-  max-width: 1200px;
-  margin: auto;
-  padding: 60px 20px;
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  background-color: #2a2c4d;
-  border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  max-width: 1200px; /* Largeur maximale pour la section d'introduction */
+  margin: auto; /* Centre la section d'introduction */
+  padding: 60px 20px; /* Espacement interne de la section d'introduction */
+  display: flex; /* Utilise le modèle de boîte flexible pour la section d'introduction */
+  align-items: center; /* Centre les éléments verticalement */
+  gap: 40px; /* Espace entre les éléments */
+  background-color: #2a2c4d; /* Couleur de fond sombre pour la section d'introduction */
+  border-radius: 10px; /* Coins arrondis pour la section d'introduction */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Ombre portée pour la section d'introduction */
 }
 
 .a-propos-intro img {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 50%;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  width: 200px; /* Largeur fixe pour l'image d'introduction */
+  height: 200px; /* Hauteur fixe pour l'image d'introduction */
+  object-fit: cover; /* Ajuste le contenu à l'intérieur de l'élément sans déformer l'image */
+  border-radius: 50%; /* Coins arrondis pour l'image d'introduction */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4); /* Ombre portée pour l'image d'introduction */
 }
 
 .intro-text {
-  flex: 1;
+  flex: 1; /* Permet à la zone de texte de prendre tout l'espace restant */
 }
 
 /* SECTION PARCOURS */
 .carre-contenu {
-  max-width: 1000px;
-  margin: 60px auto;
-  background-color: #2d2e4a;
-  padding: 60px;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  max-width: 1000px; /* Largeur maximale pour la section de contenu */
+  margin: 60px auto; /* Centre la section de contenu */
+  background-color: #2d2e4a; /* Couleur de fond sombre pour la section de contenu */
+  padding: 60px; /* Espacement interne de la section de contenu */
+  border-radius: 10px; /* Coins arrondis pour la section de contenu */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Ombre portée pour la section de contenu */
 }
 
 /* BOUTON RETOUR EN HAUT */
 .back-to-top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #a5b4fc;
-  color: white;
-  padding: 10px 15px;
-  border-radius: 50%;
-  font-size: 20px;
-  text-decoration: none;
-  z-index: 999;
-  transition: background 0.3s;
+  position: fixed; /* Fixe le bouton en bas à droite de la page */
+  bottom: 20px; /* Positionne le bouton à 20px du bas */
+  right: 20px; /* Positionne le bouton à 20px de la droite */
+  background: #a5b4fc; /* Couleur douce ou personnalisée */
+  color: white; /* Couleur du texte du bouton */
+  padding: 10px 15px; /* Espacement interne du bouton */
+  border-radius: 50%; /* Coins arrondis pour le bouton */
+  font-size: 20px; /* Taille de police pour le texte du bouton */ 
+  text-decoration: none; /* Supprime le soulignement par défaut */
+  z-index: 999; /* Assure que le bouton est au-dessus des autres éléments */
+  transition: background 0.3s; /* Transition douce pour le changement de couleur */
 }
 
 .back-to-top:hover {
-  background: #8788ba;
+  background: #8788ba; /* Changement de couleur au survol */
+}
+
+.copyright {
+  color: white; /* Couleur du texte */
+  text-align: center; /* Centrer le texte */
+  margin-top: 3em; /* Espacement au-dessus du texte */
+  margin-right: 42%; /* Espacement à droite */
+  font-size: 0.8em; /* Taille du texte */
+  display: flex; /* Active flexbox */
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
 }
 
 /* RESPONSIVE */
-@media screen and (max-width: 996px) {
+@media screen and (max-width: 996px) { 
   header nav {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column; /* Aligne les éléments du header verticalement */
+    align-items: center; /* Centre les éléments horizontalement */
+    justify-content: center; /* Centre les éléments verticalement */
   }
 
   header nav img {
@@ -195,8 +245,8 @@ main {
 
   .a-propos-intro {
     flex-direction: column;
-    text-align: center;
-  }
+    text-align: center; 
+  } 
 
   .a-propos-intro img {
     margin-bottom: 20px;
