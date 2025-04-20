@@ -23,10 +23,14 @@
             </a>
             <div>
                 <a href="index.html">Accueil</a>
+            <div class="menu-deroulant">
+                <a href="portfolio.html" class="menu-principal">Portfolio ▾</a>
+                <div class="sous-menu">
+                    <a href="CampagnesEuroapi.html">Campagne Euroapi</a>
+                    <a class="active" href="CampagnesVegami.html">Campagne Vegami</a>
+                </div>
+            </div>
                 <a href="a-propos.html">À propos</a>
-                <a href="portfolio.html">Portfolio</a>
-                <a href="CampagnesEuroapi.html">Campagne Euroapi</a>
-                <a href="CampagnesVegami.html" class="active">Campagne Vegami</a>
             </div>
         </nav>
     </header>
@@ -168,24 +172,16 @@
         </section>
     </main>
 
-    <!-- FOOTER -->
     <footer>
         <a href="index.html" class="lien-icone">
             <img class="Logofooter" src="images/LogoMR - blanc.png" alt="Logo Marine Rozet" />
         </a>
-        <p>&copy; 2025 Marine Rozet. Tous droits réservés.</p>
+        <div class="copyright">
+        <p> &copy; 2025 Marine Rozet. Tous droits réservés.</p>
+        </div>
     </footer>
-
-    <!-- BOUTON RETOUR HAUT DE PAGE -->
     <a href="#" class="back-to-top">↑</a>
-
-    <!-- Script pour le bouton "Retour en haut" -->
-    <script>
-        document.querySelector('.back-to-top').addEventListener('click', function(e) {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-    </script>
+    
 </body>
 
 </html>
