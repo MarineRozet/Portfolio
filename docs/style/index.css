@@ -76,6 +76,36 @@ header {
 
 }
 
+.menu-deroulant {
+  position: relative; /* Position relative pour le menu déroulant */
+  display: inline-block; /* Affichage en ligne */
+}
+
+.menu-deroulant .sous-menu {
+  display: none; /* Masque le sous-menu par défaut */
+  position: absolute; /* Position absolue pour le sous-menu */
+  background-color: white; /* Fond blanc */
+  min-width: 180px; /* Largeur minimale du sous-menu */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Ombre portée */
+  z-index: 1000; /* Placer au-dessus des autres éléments */
+}
+
+.menu-deroulant .sous-menu a {
+  display: block; /* Affichage en bloc pour les liens du sous-menu */
+  padding: 10px 15px; /* Espacement interne */
+  text-decoration: none;  /* Pas de soulignement */
+  color: #333; /* Couleur du texte */
+}
+
+.menu-deroulant .sous-menu a:hover {
+  background-color: #f1f1f1; /* Fond gris clair au survol */
+}
+
+.menu-deroulant:hover .sous-menu {
+  display: block; /* Affiche le sous-menu au survol */
+}
+
+
 .Logofooter {
   max-height: 50px; /* Ajuste la taille de l'image */
   height: 100%; /* S'adapte à la hauteur du header */
@@ -103,7 +133,8 @@ nav {
 }
 
 nav a {
-  margin-left: 1.8em; /* Espacement entre les liens */
+  margin-right: 2em; /* Espacement à droite des liens */
+  margin-left: 2em; /* Espacement à gauche des liens */
 }
 
 .lien-icone {
