@@ -121,6 +121,8 @@ footer {
   padding: 1em 2em; /* Espacement interne */
   bottom: 0; /* Fixe le footer en bas */
   width: 100%; /* S'étend sur toute la largeur */
+  max-height: 80px; /* Ajuste la hauteur maximale */
+  height: 100%; /* S'étend sur toute la hauteur */
 }
 
 /* ===== NAVIGATION ===== */
@@ -584,5 +586,6 @@ input[type='submit'] {
     flex-direction: column;
     text-align: center;
   }
+
 }
 
