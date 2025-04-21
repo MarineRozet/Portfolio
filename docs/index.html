@@ -14,13 +14,14 @@
     <header>
       <nav>
         <a href="index.html" class="lien-icone">
-          <img
-            class="Logoheader"
-            src="images/Logo MR - bleu.png"
-            alt="Logo Marine Rozet"
-          />
+          <img class="Logoheader" src="images/Logo MR - bleu.png" alt="Logo Marine Rozet" />
         </a>
-        <div>
+    
+        <button class="burger" id="burger">
+          ☰
+        </button>
+    
+        <div class="nav-links" id="nav-links">
           <a href="index.html" class="active">Accueil</a>
           <div class="menu-deroulant">
             <a class="menu-principal">Créations ▾</a>
@@ -34,6 +35,7 @@
         </div>
       </nav>
     </header>
+    
 
     <main>
       <section class="accueil-introduction">
@@ -107,5 +109,14 @@
       </div>
     </footer>
     <a href="#" class="back-to-top">↑</a>
+    <script>
+      const burger = document.getElementById('burger');
+      const navLinks = document.getElementById('nav-links');
+    
+      burger.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+      });
+    </script>
+    
   </body>
 </html>
