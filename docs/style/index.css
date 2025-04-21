@@ -7,7 +7,7 @@
 
 /* ===== STYLES GÉNÉRAUX ===== */
 body {
-  font-family: 'Manrope', sans-serif; /* Police générale du site */
+  font-family: "Manrope", sans-serif; /* Police générale du site */
   font-size: 1em; /* Taille de texte de base */
   background-color: #1f2039; /* Fond bleu foncé */
 }
@@ -17,12 +17,11 @@ nav a.active {
   color: #a5b4fc; /* couleur douce ou personnalisée */
 }
 
-
 /* ===== TITRES ET TEXTE ===== */
 h1 {
   font-size: 3.5em; /* Très grand titre */
+  font-family: "Montserrat", sans-serif; /* Police différente pour les titres */
   color: #a5b4fc; /* Couleur lavande douce */
-  font-family: 'Montserrat', sans-serif; /* Police différente pour les titres */
 }
 
 h2 {
@@ -61,7 +60,10 @@ em {
 }
 
 .cta:hover {
-  background: linear-gradient(#181044, #2d2d3b); /* Changement de couleur au survol */
+  background: linear-gradient(
+    #181044,
+    #2d2d3b
+  ); /* Changement de couleur au survol */
   text-decoration: none;
 }
 
@@ -73,7 +75,6 @@ header {
   background-color: white; /* Fond blanc */
   z-index: 1000; /* Placer au-dessus du reste */
   padding: 1em 2em; /* Espacement interne */
-
 }
 
 .menu-deroulant {
@@ -86,15 +87,16 @@ header {
   position: absolute; /* Position absolue pour le sous-menu */
   background-color: white; /* Fond blanc */
   min-width: 180px; /* Largeur minimale du sous-menu */
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Ombre portée */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombre portée */
   z-index: 1000; /* Placer au-dessus des autres éléments */
 }
 
 .menu-deroulant .sous-menu a {
   display: block; /* Affichage en bloc pour les liens du sous-menu */
-  padding: 10px 15px; /* Espacement interne */
-  text-decoration: none;  /* Pas de soulignement */
-  color: #333; /* Couleur du texte */
+  padding: 0.5em 0.5em; /* Espacement interne */
+  text-decoration: none; /* Pas de soulignement */
+  color: #1f2039; /* Couleur du texte */
+  margin-top: 0.8em; /* Espacement supérieur */
 }
 
 .menu-deroulant .sous-menu a:hover {
@@ -104,7 +106,6 @@ header {
 .menu-deroulant:hover .sous-menu {
   display: block; /* Affiche le sous-menu au survol */
 }
-
 
 .Logofooter {
   max-height: 50px; /* Ajuste la taille de l'image */
@@ -298,7 +299,7 @@ label {
   margin-bottom: 10px; /* Espacement sous le label */
 }
 
-input[type='submit'] {
+input[type="submit"] {
   width: 200px; /* Largeur spécifique pour le bouton de soumission */
   margin: auto; /* Centrer le bouton */
   margin-top: 30px; /* Espacement au-dessus du bouton */
@@ -307,13 +308,13 @@ input[type='submit'] {
 /* BOUTON RETOUR EN HAUT */
 .back-to-top {
   position: fixed; /* Fixe le bouton en bas à droite */
-  bottom: 20px; /* Position verticale */
-  right: 20px; /* Position horizontale */
+  bottom: 0.5em; /* Position verticale */
+  right: 0.5em; /* Position horizontale */
   background: #a5b4fc; /* Couleur de fond */
   color: white; /* Couleur du texte */
-  padding: 10px 15px; /* Espacement interne */
+  padding: 0.7em 1em; /* Espacement interne */
   border-radius: 50%; /* Forme arrondie */
-  font-size: 20px; /* Taille du texte */
+  font-size: 1.3em; /* Taille du texte */
   text-decoration: none; /* Pas de soulignement */
   z-index: 999; /* Placer au-dessus des autres éléments */
   transition: background 0.3s; /* Transition douce pour le changement de couleur */
@@ -334,258 +335,3 @@ input[type='submit'] {
   justify-content: center; /* Centre horizontalement */
   align-items: center; /* Centre verticalement */
 }
-
-/* ======= RESPONSIVE DESIGN ======= */
-
-/* 📱 Mobile - Portrait (jusqu'à 480px) */
-@media (max-width: 30em) {
-  body {
-    font-size: 0.5em;
-  }
-
-  h1 {
-    font-size: 0.5em;
-  }
-
-  .cta {
-    padding: 0.4em 1em;
-  }
-
-  .Logoheader,
-  .Logofooter {
-    max-height: 30px;
-    height: 100%;
-  }
-
-  .accueil-introduction {
-    flex-direction: row;
-    margin-top: 2em;
-  }
-
-  .accueil-introduction h1 {
-    margin-top: 1em;
-    margin-bottom: 0.2em;
-    font-size: 3em;
-  }
-
-  .accueil-introduction p {
-    font-size: 1em;
-    margin-right: 1em;
-  }
-
-  .accueil-introduction div {
-    padding-right: 0;
-  }
-
-  .accueil-introduction img {
-    width: 15em;
-    height: 15em;
-    margin-top: 10em;
-  }
-
-  .accueil-campagnes {
-    flex-direction: column;
-    padding: 2em 1em;
-  }
-
-  .textcontainer {
-    text-align: center;
-    padding: 1em 2em;
-  }
-
-  .textcontainer h1 {
-    font-size: 3em;
-  }
-
-  .textcontainer p {
-    font-size: 1.5em;
-  }
-
-  .textcontainer .cta {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .video-container {
-    margin-top: 2em;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-
-  .video-container video {
-    width: 100%;
-    max-height: 250px;
-  }
-
-  .section-contact {
-    padding: 2em 1em;
-  }
-
-  form {
-    max-width: 100%;
-  }
-
-  .form-nom-email {
-    flex-direction: column;
-    gap: 0;
-  }
-
-  .form-column {
-    margin-bottom: 1em;
-  }
-
-  input,
-  textarea {
-    font-size: 1em;
-    padding: 1em;
-  }
-
-  input[type='submit'] {
-    width: 100%;
-    margin-top: 2em;
-    font-size: 1em;
-  }
-
-  .back-to-top {
-    bottom: 10px;
-    right: 10px;
-    font-size: 1.2em;
-    padding: 0.8em 1em;
-  }
-
-  .copyright {
-    font-size: 0.7em;
-    margin: auto;
-    flex-direction: column;
-    text-align: center;
-  }
-}
-
-/* 📱 Tablette - Portrait (jusqu'à 768px) */
-@media (max-width: 48em) {
-  body {
-    font-size: 0.5em;
-  }
-
-  h1 {
-    font-size: 0.5em;
-  }
-
-  .cta {
-    padding: 0.4em 1em;
-  }
-
-  .Logoheader,
-  .Logofooter {
-    max-height: 30px;
-    height: 100%;
-  }
-
-  .accueil-introduction {
-    flex-direction: row;
-    margin-top: 2em;
-  }
-
-  .accueil-introduction h1 {
-    margin-top: 1em;
-    margin-bottom: 0.2em;
-    font-size: 3em;
-  }
-
-  .accueil-introduction p {
-    font-size: 1em;
-    margin-right: 1em;
-  }
-
-  .accueil-introduction div {
-    padding-right: 0;
-  }
-
-  .accueil-introduction img {
-    width: 15em;
-    height: 15em;
-    margin-top: 10em;
-  }
-
-  .accueil-campagnes {
-    flex-direction: column;
-    padding: 2em 1em;
-  }
-
-  .textcontainer {
-    text-align: center;
-    padding: 1em 2em;
-  }
-
-  .textcontainer h1 {
-    font-size: 3em;
-  }
-
-  .textcontainer p {
-    font-size: 1.5em;
-  }
-
-  .textcontainer .cta {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .video-container {
-    margin-top: 2em;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-
-  .video-container video {
-    width: 100%;
-    max-height: 250px;
-  }
-
-  .section-contact {
-    padding: 2em 1em;
-  }
-
-  form {
-    max-width: 100%;
-  }
-
-  .form-nom-email {
-    flex-direction: column;
-    gap: 0;
-  }
-
-  .form-column {
-    margin-bottom: 1em;
-  }
-
-  input,
-  textarea {
-    font-size: 1em;
-    padding: 1em;
-  }
-
-  input[type='submit'] {
-    width: 100%;
-    margin-top: 2em;
-    font-size: 1em;
-  }
-
-  .back-to-top {
-    bottom: 10px;
-    right: 10px;
-    font-size: 1.2em;
-    padding: 0.8em 1em;
-  }
-
-  .copyright {
-    font-size: 0.7em;
-    margin-right: 38%;
-    margin-top: 2em;
-    flex-direction: column;
-    text-align: center;
-  }
-
-}
-
