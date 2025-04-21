@@ -195,6 +195,7 @@ main {
   padding: 60px; /* Espacement interne de la section de contenu */
   border-radius: 10px; /* Coins arrondis pour la section de contenu */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Ombre portée pour la section de contenu */
+
 }
 
 /* BOUTON RETOUR EN HAUT */
