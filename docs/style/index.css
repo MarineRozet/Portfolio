@@ -335,3 +335,125 @@ input[type="submit"] {
   justify-content: center; /* Centre horizontalement */
   align-items: center; /* Centre verticalement */
 }
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media screen and (max-width: 768px) {
+  header nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-deroulant .sous-menu {
+    position: static;
+    box-shadow: none;
+  }
+
+  .accueil-introduction {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .accueil-introduction div {
+    padding: 0;
+  }
+
+  .accueil-introduction img {
+    margin-top: 2em;
+  }
+
+  .accueil-campagnes {
+    flex-direction: column;
+    padding: 2em 1em;
+  }
+
+  .textcontainer h1 {
+    font-size: 2em;
+    text-align: center;
+  }
+
+  .textcontainer p {
+    font-size: 1em;
+    text-align: center;
+  }
+
+  .textcontainer .cta {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .video-container video {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .form-nom-email {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  footer nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav a {
+    margin: 0.5em 0;
+  }
+
+  .copyright {
+    margin-right: 0;
+    margin-top: 1em;
+    text-align: center;
+  }
+}
+
+/* ===== MENU BURGER ===== */
+.burger {
+  display: none;
+  font-size: 2em;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #1f2039;
+}
+
+@media screen and (max-width: 768px) {
+  .burger {
+    display: block;
+    position: absolute;
+    right: 2em;
+    top: 1.5em;
+    z-index: 1001;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    padding: 1em 2em;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links a {
+    margin: 1em 0;
+  }
+
+  .menu-deroulant .sous-menu {
+    position: static;
+    box-shadow: none;
+    margin-left: 1em;
+  }
+
+  .menu-deroulant .sous-menu a {
+    margin-top: 0.2em;
+  }
+}
