@@ -20,6 +20,8 @@ h1 {
   font-family: 'Montserrat', sans-serif; /* Police spécifique pour le titre */
   margin-bottom: 1em; /* Ajoute un espace sous le titre */
   margin-top: 2em; /* Ajoute un espace au-dessus du titre */
+  margin-left: 7%; /* Ajoute un espace à gauche du titre */
+
 }
 
 h1, h2, p {
@@ -30,8 +32,8 @@ h1, h2, p {
 h2 {
   font-size: 2em; /* Taille de police grande pour les sous-titres */
   color: #a5b4fc; /* Couleur bleue clair pour les sous-titres */
-  margin-top: 40px; /* Ajoute un espace au-dessus des sous-titres */
-  margin-bottom: 15px; /* Ajoute un espace en dessous des sous-titres */
+  margin-top: 0.6em; /* Ajoute un espace au-dessus des sous-titres */
+  margin-bottom: 0.4em; /* Ajoute un espace en dessous des sous-titres */
 }
 
 p, li {
@@ -91,9 +93,10 @@ header {
 
 .menu-deroulant .sous-menu a {
   display: block; /* Affichage en bloc pour les liens du sous-menu */
-  padding: 10px 15px; /* Espacement interne */
+  padding: 0.5em 0.5em; /* Espacement interne */
   text-decoration: none;  /* Pas de soulignement */
-  color: #333; /* Couleur du texte */
+  color: #1f2039; /* Couleur du texte */
+  margin-top: 0.8em; /* Ajoute un espace au-dessus des liens du sous-menu */
 }
 
 .menu-deroulant .sous-menu a:hover {
@@ -153,7 +156,7 @@ section {
 
 /* CONTENU GÉNÉRAL */
 main {
-  padding-top: 120px; /* Ajoute un espace en haut du contenu principal pour ne pas chevaucher l'en-tête fixe */
+  padding-top: 15em; /* Ajoute un espace en haut du contenu principal pour ne pas chevaucher l'en-tête fixe */
 }
 
 .container {
@@ -179,9 +182,9 @@ html, main {
 
 .carre-contenu {
   max-width: 1000px; /* Limite la largeur du conteneur */
-  margin: 60px auto; /* Centrage automatique horizontal et un espace au-dessus et au-dessous */
+  margin: 0.6em auto; /* Centrage automatique horizontal et un espace au-dessus et au-dessous */
   background-color: #2d2e4a; /* Fond de la section en gris foncé */
-  padding: 60px; /* Espacement interne de la section */
+  padding: 0.6em; /* Espacement interne de la section */
   border-radius: 10px; /* Bords arrondis */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Ombre autour du conteneur pour un effet flottant */
 }
@@ -190,29 +193,22 @@ html, main {
 .photo-grid {
   display: grid; /* Utilise le système de grille CSS */
   grid-template-columns: repeat(3, 1fr); /* Crée 3 colonnes égales */
-  gap: 5px; /* Réduit l'écart entre les images */
-  margin-top: 30px; /* Ajoute un espace au-dessus de la grille */
+  width: 100%; /* Limite la largeur de la grille de son conteneur parent */
+  aspect-ratio: 6/2; /* Définit un ratio d'aspect de 6:2 pour la grille */
 }
 
 .photo-gridvegami {
   display: grid; /* Utilise le système de grille CSS */
   grid-template-columns: repeat(2, 1fr); /* Crée 3 colonnes égales */
-  margin: 0 auto; /* Centre la grille horizontalement */
-  max-width: 1100px; /* Limite la largeur du conteneur */
   width: 100%; /* Prend toute la largeur disponible */
-  gap: 15px; /* Espace de 15px entre les images */
-  margin-left: 3em; /* Ajoute un espace à gauche */
+  aspect-ratio: 5/2; /* Définit un ratio d'aspect de 6:2 pour la grille */
 }
 
 .photo-gridgkpro {
   display: grid; /* Utilise le système de grille CSS */
   grid-template-columns: 1fr; /* Crée 1 colonne égale */
-  margin: 0 auto; /* Centre la grille horizontalement */
-  max-width: 1200px; /* Limite la largeur du conteneur */
   width: 100%; /* Prend toute la largeur disponible */
-  margin-left: 3em; /* Ajoute un espace à gauche */
-  margin-bottom: 1em; /* Ajoute un espace en bas */
-
+  aspect-ratio: 11/2; /* Définit un ratio d'aspect de 1:1 pour la grille */
 }
 
 .photo-link {
@@ -234,12 +230,12 @@ html, main {
 
 .overlay {
   position: absolute;
-  bottom: 10px;
-  left: 10px;
-  right: 10px;
+  bottom: 0.5em; /* Positionne l'overlay en bas de l'image */
+  left: 0.5em; /* Positionne l'overlay à gauche de l'image */
+  right: 0.5em; /* Positionne l'overlay à droite de l'image */
   background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
-  padding: 0 20px;
+  padding: 0 0.2em; /* Espacement interne de l'overlay */
   font-size: 1.1rem;
   text-align: center;
   border-radius: 10px;
@@ -255,7 +251,7 @@ html, main {
 .portfolio-section:nth-of-type(2) .photo-grid {
   display: grid; /* Utilise une grille pour cette section spécifique */
   grid-template-columns: repeat(3, 1fr); /* 3 colonnes pour la section Euroapi */
-  gap: 15px;  /* Espace de 15px entre les images */
+  gap: 0.5em; /* Espace entre les images */
 }
 
   /* Conteneur pour gérer le zoom et l’overlay */
@@ -290,7 +286,7 @@ html, main {
     justify-content: center;
     color: #fff;
     font-size: 1.5em;
-    padding: 0 20px;
+    padding: 0 0.5em; 
     text-align: center;
   }
   
