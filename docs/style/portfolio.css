@@ -13,6 +13,11 @@ body {
   color: #f9f8ff; /* Définit une couleur de texte claire */
 }
 
+nav a.active {
+  font-weight: bold;
+  color: #a5b4fc; /* couleur douce ou personnalisée */
+}
+
 /* TYPOGRAPHIE */
 h1 {
   font-size: 3.5em; /* Taille de police très grande pour les titres de niveau 1 */
@@ -208,7 +213,6 @@ html, main {
   display: grid; /* Utilise le système de grille CSS */
   grid-template-columns: 1fr; /* Crée 1 colonne égale */
   width: 100%; /* Prend toute la largeur disponible */
-  aspect-ratio: 11/2; /* Définit un ratio d'aspect de 1:1 pour la grille */
 }
 
 .photo-link {
@@ -243,6 +247,7 @@ html, main {
   transition: opacity 0.3s ease;
   max-width: 83%; /* Limite la largeur de l'overlay pour éviter les débordements */
 }
+
 .photo-link:hover .overlay {
   opacity: 1; /* Affiche l'overlay lorsque l'on survole l'image */
 }
@@ -272,7 +277,7 @@ html, main {
   }
   
   /* Effet overlay */
-  .zoom-container .overlay {
+  .zoom-container .overlay{
     position: absolute;
     top: 0;
     left: 0;
@@ -295,15 +300,10 @@ html, main {
     transform: scale(1.05);
   }
   
-  .zoom-container:hover .overlay {
+  .zoom-container:hover .overlay{
     opacity: 1;
   }
-
-  nav a.active {
-    font-weight: bold;
-    color: #a5b4fc; /* couleur douce ou personnalisée */
-}
-
+  
 
 /* BOUTON RETOUR EN HAUT */
 .back-to-top {

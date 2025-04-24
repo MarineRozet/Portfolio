@@ -13,23 +13,34 @@
 <body>
   <header>
     <nav>
-        <a href="index.html" class="lien-icone">
-            <img class="Logoheader" src="images/Logo MR - bleu.png" alt="Logo Marine Rozet" />
-        </a>
-        <div>
-            <a href="index.html">Accueil</a>
+      <a href="index.html" class="lien-icone">
+        <img class="Logoheader" src="images/Logo MR - bleu.png" alt="Logo Marine Rozet" />
+      </a>
+  
+      <button class="burger" id="burger">
+        ☰
+      </button>
+  
+      <div class="nav-links" id="nav-links">
+        <a href="index.html">Accueil</a>
         <div class="menu-deroulant">
-            <a class="menu-principal">Créations ▾</a>
-            <div class="sous-menu">
-                <a href="portfolio.html">Portfolio</a>
-                <a href="CampagnesEuroapi.html">Campagne Euroapi</a>
-                <a href="CampagnesVegami.html">Campagne Vegami</a>
-            </div>
+          <a class="menu-principal">Créations ▾</a>
+          <div class="sous-menu">
+            <a href="portfolio.html">Portfolio</a>
+            <a href="CampagnesEuroapi.html">Campagne Euroapi</a>
+            <a href="CampagnesVegami.html">Campagne Vegami</a>
+          </div>
         </div>
-            <a class="active" href="a-propos.html">À propos</a>
+        <div class="menu-deroulant">
+          <a class="active">À propos ▾</a>
+          <div class="sous-menu">
+            <a class="active" href="a-propos.html">Qui suis-je</a>
+            <a href="cv.html">Mon CV</a>
+            <a href="https://www.linkedin.com/in/marine-rozet/" target="_blank">LinkedIn</a>
+          </div>
         </div>
     </nav>
-</header>
+  </header>
 
   <main class="a-propos-main">
     <!-- INTRODUCTION + PHOTO -->
@@ -88,7 +99,14 @@
     </div>
 </footer>
 <a href="#" class="back-to-top">↑</a>
+<script>
+  const burger = document.getElementById('burger');
+  const navLinks = document.getElementById('nav-links');
 
+  burger.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+</script>
 </body>
 
 </html>

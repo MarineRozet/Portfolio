@@ -19,14 +19,20 @@
             <div>
                 <a href="index.html">Accueil</a>
             <div class="menu-deroulant">
-                <a class="menu-principal">Créations ▾</a>
+                <a class="active">Créations ▾</a>
                 <div class="sous-menu">
                     <a href="portfolio.html">Portfolio</a>
                     <a class="active" href="CampagnesEuroapi.html">Campagne Euroapi</a>
                     <a href="CampagnesVegami.html">Campagne Vegami</a>
                 </div>
             </div>
-                <a href="a-propos.html">À propos</a>
+            <div class="menu-deroulant">
+                <a class="">À propos ▾</a>
+                <div class="sous-menu">
+                    <a href="a-propos.html">Qui suis-je</a>
+                    <a href="cv.html">Mon CV</a>
+                    <a href="https://www.linkedin.com/in/marine-rozet/" target="_blank">LinkedIn</a>
+                </div>
             </div>
         </nav>
     </header>
@@ -47,12 +53,13 @@
             </div>
             <div class="media">
                 <div class="zoom-container">
-                    <a href="images/postvideoalter.jpg" class="photo-link">
-                        <img src="images/postvideoalter.jpg" alt="Post LinkedIn vidéo alternant" />
+                    <a href="images/postvideoalter.jpg" target="_blank" class="photo-link">
+                        <img src="images/postvideoalter.jpg" alt="Post LinkedIn vidéo alternant" id="thumbnail" />
                         <div class="overlay">Voir la photo</div>
                     </a>
                 </div>
             </div>
+
         </section>
 
         <!-- Bloc 2 : Vidéo à gauche, texte à droite -->
@@ -88,8 +95,8 @@
             </div>
             <div class="media">
                 <div class="zoom-container">
-                    <a href="images/postjuliette.jpg" class="photo-link">
-                        <img src="images/postjuliette.jpg" alt="Post LinkedIn Juliette Euroapi" />
+                    <a href="images/postjuliette.jpg" target="_blank" class="photo-link">
+                        <img src="images/postjuliette.jpg" alt="Post LinkedIn Juliette Euroapi" id="thumbnail" />
                         <div class="overlay">Voir la photo</div>
                     </a>
                 </div>
@@ -135,6 +142,35 @@
     </footer>
     <a href="#" class="back-to-top">↑</a>
     
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox">
+    <span id="close" class="close">&times;</span>
+    <img id="lightbox-img" class="lightbox-content" alt="Agrandissement" />
+  </div>
+  <script>
+    const thumbnail = document.getElementById("thumbnail");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    const closeBtn = document.getElementById("close");
+  
+    thumbnail.addEventListener("click", (e) => {
+      e.preventDefault(); // empêche le lien <a> d'ouvrir une nouvelle page
+      lightbox.style.display = "flex";
+      lightboxImg.src = thumbnail.src;
+    });
+  
+    closeBtn.addEventListener("click", () => {
+      lightbox.style.display = "none";
+    });
+  
+    lightbox.addEventListener("click", (e) => {
+      if (e.target === lightbox) {
+        lightbox.style.display = "none";
+      }
+    });
+  </script>
+
 </body>
 
 </html>
