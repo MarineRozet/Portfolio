@@ -9,12 +9,13 @@
     "stylelint-config-standard": "^38.0.0"
   },
   "scripts": {
-  "format": "prettier --write \"**/*.{js,css,html,json}\"",
-  "lint:js": "eslint \"**/*.js\"",
-  "lint:css": "stylelint \"**/*.css\"",
-  "lint": "npm run lint:js && npm run lint:css",
-  "lint:fix": "eslint . --ext .js --fix && stylelint \"**/*.css\" --fix"
-
-}
-
+    "format": "prettier --write \"**/*.{js,css,html,json}\"",
+    "lint:js": "eslint \"**/*.js\"",
+    "lint:css": "stylelint \"**/*.css\"",
+    "lint": "npm run lint:js && npm run lint:css",
+    "lint:fix": "eslint . --ext .js --fix && stylelint \"**/*.css\" --fix"
+  },
+  "dependencies": {
+    "aos": "^2.3.4"
+  }
 }

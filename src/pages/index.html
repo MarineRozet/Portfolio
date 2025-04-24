@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
   <head>
     <meta charset="utf-8" />
@@ -15,10 +15,11 @@
       href="https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat&display=swap"
       rel="stylesheet"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
 
-  <body>
-    <header>
+  <body data-aos="fade-in" data-aos-duration="1200">
+    <header data-aos="fade-down">
       <nav>
         <a href="index.html" class="lien-icone">
           <img
@@ -27,9 +28,7 @@
             alt="Logo Marine Rozet"
           />
         </a>
-
         <button class="burger" id="burger">☰</button>
-
         <div class="nav-links" id="nav-links">
           <a href="index.html" class="active">Accueil</a>
           <div class="menu-deroulant">
@@ -41,7 +40,7 @@
             </div>
           </div>
           <div class="menu-deroulant">
-            <a class="">À propos ▾</a>
+            <a>À propos ▾</a>
             <div class="sous-menu">
               <a href="a-propos.html">Qui suis-je</a>
               <a href="cv.html">Mon CV</a>
@@ -57,7 +56,7 @@
     </header>
 
     <main>
-      <section class="accueil-introduction">
+      <section class="accueil-introduction" data-aos="fade-up">
         <div>
           <h1>Bienvenue dans mon univers</h1>
           <p>
@@ -72,10 +71,14 @@
           </p>
           <a href="a-propos.html" class="cta">QUI SUIS-JE ?</a>
         </div>
-        <img src="../../public/images/MarineRozet.jpg" alt="Portrait Marine Rozet" />
+        <img
+          src="../../public/images/MarineRozet.jpg"
+          alt="Portrait Marine Rozet"
+          data-aos="fade-left"
+        />
       </section>
 
-      <section class="accueil-campagnes">
+      <section class="accueil-campagnes" data-aos="fade-up">
         <div class="textcontainer">
           <h1>Mes campagnes marquantes</h1>
           <p>
@@ -89,19 +92,21 @@
           </p>
           <a href="portfolio.html" class="cta">VOIR MON PORTFOLIO</a>
         </div>
-
-        <div class="video-container">
+        <div class="video-container" data-aos="fade-right">
           <video controls="controls">
-            <source src="../../public/videos/Extrait video CA.mp4" type="video/mp4" />
+            <source
+              src="../../public/videos/Extrait video CA.mp4"
+              type="video/mp4"
+            />
             Votre navigateur ne supporte pas la vidéo.
           </video>
         </div>
       </section>
-      <section id="contact" class="section-contact">
+
+      <section id="contact" class="section-contact" data-aos="fade-up">
         <h2>Contactez-moi</h2>
         <form method="POST" action="https://formspree.io/f/xdkeqvng">
           <input type="hidden" name="_redirect" value="" />
-
           <div class="form-nom-email">
             <div class="form-column">
               <label for="nom">Nom</label>
@@ -123,7 +128,8 @@
         </form>
       </section>
     </main>
-    <footer>
+
+    <footer data-aos="fade-up">
       <a href="index.html" class="lien-icone">
         <img
           class="Logofooter"
@@ -135,14 +141,29 @@
         <p>&copy; 2025 Marine Rozet. Tous droits réservés.</p>
       </div>
     </footer>
-    <a href="#" class="back-to-top">↑</a>
+
+    <a href="#" class="back-to-top" id="backToTop">↑</a>
+
     <script>
       const burger = document.getElementById("burger");
       const navLinks = document.getElementById("nav-links");
+      const backToTop = document.getElementById("backToTop");
 
       burger.addEventListener("click", () => {
         navLinks.classList.toggle("show");
       });
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+          backToTop.style.opacity = 1;
+        } else {
+          backToTop.style.opacity = 0;
+        }
+      });
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
     </script>
   </body>
 </html>

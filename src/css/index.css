@@ -12,6 +12,10 @@ body {
   background-color: #1f2039; /* Fond bleu foncé */
 }
 
+main {
+  padding-top: 1em; /* ajuste si ton header est plus petit ou plus grand */
+}
+
 nav a.active {
   font-weight: bold; /* Met en gras le lien actif */
   color: #a5b4fc; /* couleur douce ou personnalisée */
@@ -70,12 +74,15 @@ em {
 
 /* ===== HEADER & FOOTER ===== */
 header {
-  position: fixed; /* Fixe le header en haut */
-  top: 0; /* En haut de la page */
-  width: 100%; /* S'étend sur toute la largeur */
-  background-color: white; /* Fond blanc */
-  z-index: 1000; /* Placer au-dessus du reste */
-  padding: 1em 2em; /* Espacement interne */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  background-color: #fff;
+  z-index: 1000;
+  padding: 1em 2em;
+  box-shadow: 0 2px 10px #03041b;
 }
 
 .menu-deroulant {
@@ -156,14 +163,14 @@ section {
 
 /* ===== ACCUEIL - INTRODUCTION ===== */
 .accueil-introduction {
-  display: flex; /* Utilisation de flexbox */
-  flex-direction: row; /* Alignement horizontal des éléments */
-  max-width: 1300px; /* Largeur maximale de la section */
-  align-items: flex-start; /* Aligne les éléments en haut */
-  margin: auto; /* Centrage horizontal */
-  margin-top: 3em; /* Espacement supérieur */
-  margin-bottom: 1em; /* Espacement inférieur */
-  width: 100%; /* S'étend sur toute la largeur */
+  display: flex;
+  flex-direction: row;
+  max-width: 1300px;
+  align-items: flex-start;
+  margin: auto;
+  margin-top: 3em;
+  margin-bottom: 1em;
+  width: 100%;
 }
 
 .accueil-introduction div {
@@ -186,11 +193,20 @@ section {
 }
 
 .accueil-introduction img {
-  max-width: 300px; /* Taille de l'image */
-  aspect-ratio: 1/1.2; /* Ratio d'aspect de l'image */
-  object-fit: cover; /* Garder les proportions de l'image */
-  margin-top: 5em; /* Espacement au-dessus de l'image */
-  border-radius: 10px; /* Coins arrondis */
+  max-width: 300px;
+  aspect-ratio: 1/1.2;
+  object-fit: cover;
+  margin-top: 5em;
+  border-radius: 10px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgb(0 0 0 / 10%);
+}
+
+.accueil-introduction img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgb(0 0 0 / 30%);
 }
 
 /* ===== ACCUEIL - CAMPAGNES ===== */
@@ -338,134 +354,6 @@ input[type="submit"] {
   align-items: center; /* Centre verticalement */
 }
 
-@media screen and (width <= 768px) {
-  /* GÉNÉRAL */
-  body {
-    font-size: 0.95em;
-    padding: 0 1em;
-  }
-
-  h1 {
-    font-size: 2em;
-    text-align: center;
-  }
-
-  h2 {
-    font-size: 1.5em;
-    text-align: center;
-  }
-
-  p,
-  li {
-    font-size: 1em;
-    text-align: justify;
-  }
-
-  /* NAVIGATION */
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1em;
-  }
-
-  nav a {
-    margin: 0.5em 0;
-  }
-
-  .menu-deroulant {
-    width: 100%;
-  }
-
-  .menu-deroulant .sous-menu {
-    position: static;
-    box-shadow: none;
-    margin-top: 0.5em;
-    background-color: transparent;
-  }
-
-  .menu-deroulant .sous-menu a {
-    color: #1f2039;
-    padding-left: 1em;
-  }
-
-  /* SECTION INTRO */
-  .accueil-introduction {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 1em;
-  }
-
-  .accueil-introduction div {
-    padding-right: 0;
-  }
-
-  .accueil-introduction img {
-    margin-top: 2em;
-    max-width: 80%;
-  }
-
-  /* SECTION CAMPAGNES */
-  .accueil-campagnes {
-    flex-direction: column;
-    gap: 2em;
-    padding: 2em 1em;
-  }
-
-  .textcontainer {
-    text-align: center;
-  }
-
-  .textcontainer h1,
-  .textcontainer p {
-    text-align: center;
-  }
-
-  .video-container video {
-    width: 100%;
-  }
-
-  /* FORMULAIRE CONTACT */
-  .form-nom-email {
-    flex-direction: column;
-    gap: 0.5em;
-  }
-
-  input,
-  textarea {
-    font-size: 1em;
-  }
-
-  input[type="submit"] {
-    width: 100%;
-    margin-top: 1em;
-  }
-
-  /* FOOTER */
-  footer {
-    width: 100%;
-  }
-
-  header {
-    width: 100%;
-  }
-
-  .copyright {
-    margin-right: 0;
-    margin-top: 1em;
-    font-size: 0.7em;
-    flex-direction: column;
-  }
-
-  /* BOUTON RETOUR HAUT */
-  .back-to-top {
-    font-size: 1em;
-    padding: 0.5em;
-    bottom: 1em;
-    right: 1em;
-  }
-}
-
 /* ===== RESPONSIVE BURGER + MISE EN PAGE ===== */
 .burger {
   display: none;
@@ -477,21 +365,29 @@ input[type="submit"] {
 }
 
 @media screen and (width <= 768px) {
-  /* NAVIGATION */
+  /* ========== NAVIGATION ========== */
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   .burger {
     display: block;
     position: absolute;
-    top: 1.2em;
+    top: 1em;
     right: 1.5em;
-    z-index: 1001;
+    font-size: 2em;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #1f2039;
   }
 
   .nav-links {
     display: none;
     flex-direction: column;
-    align-items: flex-start;
-    background-color: white;
     width: 100%;
+    background-color: white;
     position: absolute;
     top: 80px;
     left: 0;
@@ -505,7 +401,6 @@ input[type="submit"] {
   }
 
   .nav-links a {
-    margin: 1em 0;
     color: #1f2039;
   }
 
@@ -520,12 +415,12 @@ input[type="submit"] {
     margin-top: 0.5em;
   }
 
-  /* INTRODUCTION */
+  /* ========== INTRO ========== */
   .accueil-introduction {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 1em;
+    padding: 2em 1em;
   }
 
   .accueil-introduction img {
@@ -538,11 +433,16 @@ input[type="submit"] {
     margin-top: 1em;
   }
 
-  /* CAMPAGNES */
+  .accueil-introduction p {
+    font-size: 1em;
+    width: 100%;
+  }
+
+  /* ========== CAMPAGNES ========== */
   .accueil-campagnes {
     flex-direction: column;
-    padding: 2em 1em;
     gap: 2em;
+    padding: 2em 1em;
   }
 
   .textcontainer {
@@ -555,9 +455,10 @@ input[type="submit"] {
 
   .video-container video {
     width: 100%;
+    height: auto;
   }
 
-  /* CONTACT */
+  /* ========== CONTACT ========== */
   .form-nom-email {
     flex-direction: column;
     gap: 1em;
@@ -568,25 +469,21 @@ input[type="submit"] {
     margin-top: 1em;
   }
 
-  /* FOOTER */
+  /* ========== FOOTER ========== */
   footer {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     text-align: center;
   }
 
   .copyright {
-    margin: 1em 0 0;
-    margin-right: 0;
+    margin-top: 1em;
     font-size: 0.8em;
-    justify-content: center;
+    margin-right: 0;
   }
 
-  /* BOUTON RETOUR HAUT */
+  /* ========== BOUTON RETOUR EN HAUT ========== */
   .back-to-top {
     font-size: 1em;
-    padding: 0.5em;
-    bottom: 1em;
-    right: 1em;
   }
 }
