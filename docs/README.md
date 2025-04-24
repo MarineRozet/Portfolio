@@ -1,64 +1,18 @@
-<!DOCTYPE html>
-<html lang="fr">
+# 🌐 Portfolio de Marine Rozet
 
-<head>
-    <meta charset="utf-8" >
-    <title>Accueil - Robbie Lens Photographie</title>
-    <link href="style.css" rel="stylesheet" >
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat&display=swap" rel="stylesheet">
-</head>
+Bienvenue sur mon portfolio professionnel.  
+Ce site présente une sélection de mes projets en **communication digitale**, **design graphique**, **événementiel** et **contenus éthiques**.
 
-<body>
-    <header>
-        <nav>
-            <img src="images/logo.png" alt="Logo Robbie Lens" >
-            <div>
-                <a href="index.html">Accueil</a>
-                <a href="a-propos.html">À propos</a>
-                <a href="portfolio.html">Portfolio</a>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <section class="accueil-introduction">
-            <div>
-                <h1>Robbie Lens Photographie</h1>
-                <p>
-                    Où <em>professionalisme</em> s’allie avec <em>passion</em>. Depuis
-                    plus de 5 ans maintenant, j’exerce mon métier avec la passion
-                    qui m’anime : capturer l’essence de chaque instant.
-                </p>
-                <a href="" class="cta">UN PROJET ? ÉCRIVEZ-MOI</a>
-            </div>
-            <img src="images/robbie-lens.png" alt="Portrait avec effet de la photographe Robbie Lens" >
-        </section>
-        <section class="accueil-photos">
-            <h2>Mon dernier projet</h2>
-            <div>
-                <img src="images/accueil/element-1.png" alt="Twelve apostles - Australie" >
-                <img src="images/accueil/element-2.png" alt="Wai-O-Tapu - Nouvelle-Zélande" >
-                <img src="images/accueil/element-3.png" alt="Parc National d’Abel Tasman - Nouvelle-Zélande" >
-            </div>
-            <div>
-                <img src="images/accueil/element-4.png" alt="Lac Rotorua - Nouvelle-Zélande" >
-                <img src="images/accueil/element-5.png" alt="Milford Sound - Nouvelle-Zélande" >
-                <img src="images/accueil/element-6.png" alt="Lac Wanaka - Nouvelle-Zélande" >
-            </div>
-        </section>
-    </main>
-    <footer>
-        <img src="images/logo.png" alt="Logo Robbie Lens" >
-        <div>
-            <a target="_blank" href="https://twitter.com/" class="lien-icone">
-                <img src="images/twitter.png" alt="Logo Twitter" >
-            </a>
-            <a target="_blank" href="https://www.instagram.com/" class="lien-icone">
-                <img src="images/instagram.png" alt="Logo Instagram" >
-            </a>
-        </div>
-    </footer>
-</body>
+---
 
-</html>
+## 🎯 Objectif
+
+Créer un espace personnel en ligne pour partager :
+- Mes réalisations professionnelles
+- Mon approche stratégique en communication
+- Mes valeurs de **créativité**, **éthique**, et **intuition**
+
+---
+
+## 🗂️ Arborescence des dossiers
+
