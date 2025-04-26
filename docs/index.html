@@ -7,20 +7,25 @@
     <link href="style/index.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
     <header>
       <nav>
         <a href="index.html" class="lien-icone">
-          <img class="Logoheader" src="images/Logo MR - bleu.png" alt="Logo Marine Rozet" />
+          <img
+            class="Logoheader"
+            src="images/Logo MR - bleu.png"
+            alt="Logo Marine Rozet"
+          />
         </a>
-    
-        <button class="burger" id="burger">
-          ☰
-        </button>
-    
+
+        <button class="burger" id="burger">☰</button>
+
         <div class="nav-links" id="nav-links">
           <a href="index.html" class="active">Accueil</a>
           <div class="menu-deroulant">
@@ -36,22 +41,30 @@
             <div class="sous-menu">
               <a href="a-propos.html">Qui suis-je</a>
               <a href="cv.html">Mon CV</a>
-              <a href="https://www.linkedin.com/in/marine-rozet/" target="_blank">LinkedIn</a>
+              <a
+                href="https://www.linkedin.com/in/marine-rozet/"
+                target="_blank"
+                >LinkedIn</a
+              >
             </div>
           </div>
+        </div>
       </nav>
     </header>
-    
 
     <main>
       <section class="accueil-introduction">
         <div>
           <h1>Bienvenue dans mon univers</h1>
-            <p>
-              Je suis Marine, chargée de communication spécialisée en stratégie digitale, communication interne et projets événementiels.<br>
-              J’aime donner du sens aux messages, structurer les idées, et créer des supports qui rassemblent.<br>
-              Ce site présente une sélection de mes réalisations, un aperçu de mon parcours, et la façon dont je conçois une communication claire, humaine et engagée.<br>
-              Bonne visite ! 
+          <p>
+            Je suis Marine, chargée de communication spécialisée en stratégie
+            digitale, communication interne et projets événementiels.<br />
+            J’aime donner du sens aux messages, structurer les idées, et créer
+            des supports qui rassemblent.<br />
+            Ce site présente une sélection de mes réalisations, un aperçu de mon
+            parcours, et la façon dont je conçois une communication claire,
+            humaine et engagée.<br />
+            Bonne visite !
           </p>
           <a href="a-propos.html" class="cta">QUI SUIS-JE ?</a>
         </div>
@@ -115,13 +128,12 @@
     </footer>
     <a href="#" class="back-to-top">↑</a>
     <script>
-      const burger = document.getElementById('burger');
-      const navLinks = document.getElementById('nav-links');
-    
-      burger.addEventListener('click', () => {
-        navLinks.classList.toggle('show');
+      const burger = document.getElementById("burger");
+      const navLinks = document.getElementById("nav-links");
+
+      burger.addEventListener("click", () => {
+        navLinks.classList.toggle("show");
       });
     </script>
-    
   </body>
 </html>
