@@ -20,15 +20,18 @@
           <img
             class="Logoheader"
             src="images/Logo MR - bleu.png"
-            alt="Logo de Marine Rozet"
+            alt="Logo Marine Rozet"
           />
         </a>
-        <div>
+
+        <button class="burger" id="burger">☰</button>
+
+        <div class="nav-links" id="nav-links">
           <a href="index.html">Accueil</a>
           <div class="menu-deroulant">
-            <a class="active">Créations ▾</a>
+            <a class="menu-principal">Créations ▾</a>
             <div class="sous-menu">
-              <a class="active" href="portfolio.html">Portfolio</a>
+              <a href="portfolio.html" class="active">Portfolio</a>
               <a href="CampagnesEuroapi.html">Campagne Euroapi</a>
               <a href="CampagnesVegami.html">Campagne Vegami</a>
             </div>
@@ -56,79 +59,123 @@
           <p>Découvrez mes projets récents dans différents domaines.</p>
         </section>
 
-        <article class="portfolio-section">
+        <section class="portfolio-section">
           <h2><a href="CampagnesEuroapi.html">Euroapi</a></h2>
-          <div class="photo-grid">
-            <figure class="photo-link">
-              <img
-                src="images/euroapi1.jpg"
-                alt="Communication interne Euroapi 1"
-              />
-            </figure>
-            <figure class="photo-link">
-              <img
-                src="images/euroapi2.jpg"
-                alt="Communication interne Euroapi 2"
-              />
-            </figure>
-            <figure class="photo-link">
-              <img
-                src="images/euroapi3.jpg"
-                alt="Communication interne Euroapi 3"
-              />
-            </figure>
-            <figure class="photo-link">
-              <img
-                class="euroapi4"
-                src="images/euroapi4.jpg"
-                alt="Communication interne Euroapi 4"
-              />
-            </figure>
-            <figure class="photo-link">
-              <img
-                class="euroapi5"
-                src="images/euroapi5.jpg"
-                alt="Communication interne Euroapi 5"
-              />
-            </figure>
-            <figure class="photo-link">
-              <img
-                src="images/euroapi6.jpg"
-                alt="Communication interne Euroapi 6"
-              />
-            </figure>
-          </div>
-        </article>
+          <div class="slider-container">
+            <button class="slider-btn prev" data-slider="euroapi">
+              &#10094;
+            </button>
 
-        <article class="portfolio-section">
+            <div class="slider" id="slider-euroapi">
+              <div class="image-container">
+                <img src="images/euroapi1.jpg" alt="Projet Euroapi 1" />
+                <div class="hover-text">
+                  Couverture du livret parental, livret créé pour aider nos
+                  collaborateurs-parents à connaître leurs droits
+                </div>
+              </div>
+              <div class="image-container">
+                <img src="images/euroapi2.jpg" alt="Projet Euroapi 2" />
+                <div class="hover-text">Page d'exemple du livret parental</div>
+              </div>
+              <div class="image-container">
+                <img src="images/euroapi3.jpg" alt="Projet Euroapi 3" />
+                <div class="hover-text">
+                  Flyer sur la bonne composition d'un plateau nutritif, fait à
+                  l'occasion de la semaine de la QVT
+                </div>
+              </div>
+              <div class="image-container">
+                <img src="images/euroapi4.jpg" alt="Projet Euroapi 4" />
+                <div class="hover-text">
+                  Page d'entrée de la brochure sur les troubles DYS en
+                  entreprise, diffusée sur nos écrans et imprimée en brochure à
+                  disposition des collaborateurs
+                </div>
+              </div>
+              <div class="image-container">
+                <img src="images/euroapi5.jpg" alt="Projet Euroapi 5" />
+                <div class="hover-text">
+                  Page d'explication du trouble Dysphasie
+                </div>
+              </div>
+              <div class="image-container">
+                <img src="images/euroapi6.jpg" alt="Projet Euroapi 6" />
+                <div class="hover-text">
+                  Flyer de rappels des différents troubles DYS, distribué et
+                  affiché dans les bureaux.
+                </div>
+              </div>
+            </div>
+
+            <button class="slider-btn next" data-slider="euroapi">
+              &#10095;
+            </button>
+          </div>
+        </section>
+
+        <section class="portfolio-section">
           <h2><a href="CampagnesVegami.html">Vegami</a></h2>
-          <div class="photo-grid">
-            <figure class="photo-link">
-              <img src="images/vegami1.jpg" alt="Affiche marketing Vegami 1" />
-            </figure>
-            <figure class="photo-link">
-              <img src="images/vegami2.jpg" alt="Affiche marketing Vegami 2" />
-            </figure>
-            <figure class="photo-link">
-              <img src="images/vegami3.jpg" alt="Affiche marketing Vegami 3" />
-            </figure>
-            <figure class="photo-link">
-              <img src="images/vegami4.jpg" alt="Affiche marketing Vegami 4" />
-            </figure>
-          </div>
-        </article>
+          <div class="slider-container">
+            <button class="slider-btn prev" data-slider="vegami">
+              &#10094;
+            </button>
 
-        <article class="portfolio-section">
+            <div class="slider" id="slider-vegami">
+              <div class="image-container">
+                <img src="images/vegami1.jpg" alt="Projet Vegami 1" />
+                <div class="hover-text">
+                  Post Instagram pour l'événement "Rencontres veganes", une
+                  série de rencontres en magasin entre des associations engagées
+                  et nos clients
+                </div>
+              </div>
+              <div class="image-container">
+                <img src="images/vegami2.jpg" alt="Projet Vegami 2" />
+                <div class="hover-text">
+                  Post Instagram pour une dégustation d'une nouvelle marque
+                  arrivée en magasin
+                </div>
+              </div>
+              <div class="image-container">
+                <img src="images/vegami3.jpg" alt="Projet Vegami 3" />
+                <div class="hover-text">
+                  Invitation à la soiree speciale Influenceurs à Noel, pour les
+                  remercier de leur implication sur le calendrier des recettes
+                  de l'Avent
+                </div>
+              </div>
+              <div class="image-container">
+                <img src="images/vegami4.jpg" alt="Projet Vegami 4" />
+                <div class="hover-text">
+                  Recette déposée sur un blog privé spécial influenceurs
+                </div>
+              </div>
+            </div>
+
+            <button class="slider-btn next" data-slider="vegami">
+              &#10095;
+            </button>
+          </div>
+        </section>
+
+        <section class="portfolio-section">
           <h2>GKPro</h2>
-          <div class="photo-grid">
-            <figure class="photo-link">
-              <img
-                src="images/gkpro1.jpg"
-                alt="Projet communication produit GKPro"
-              />
+          <div class="slider-container">
+            <figure class="slider">
+              <div class="image-container">
+                <img
+                  src="images/gkpro1.jpg"
+                  alt="Projet communication produit GKPro"
+                />
+                <div class="hover-text">
+                  Affiche réalisée dans le cadre d'un événement Dedicace en
+                  magasin.
+                </div>
+              </div>
             </figure>
           </div>
-        </article>
+        </section>
       </div>
     </main>
 
@@ -147,38 +194,13 @@
 
     <a href="#" class="back-to-top" aria-label="Retour en haut de la page">↑</a>
 
-    <!-- Lightbox personnalisée -->
+    <!-- Lightbox -->
     <div id="lightbox" class="lightbox" role="dialog" aria-modal="true">
       <span class="close" aria-label="Fermer la fenêtre">&times;</span>
       <img class="lightbox-content" id="lightbox-img" />
     </div>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const lightbox = document.getElementById("lightbox");
-        const lightboxImg = document.getElementById("lightbox-img");
-        const closeBtn = document.querySelector(".close");
-        const links = document.querySelectorAll(".photo-link");
-
-        links.forEach((link) => {
-          link.addEventListener("click", function (e) {
-            e.preventDefault();
-            const img = link.querySelector("img");
-            lightbox.style.display = "flex";
-            lightboxImg.src = img.src;
-          });
-        });
-
-        closeBtn.addEventListener("click", () => {
-          lightbox.style.display = "none";
-        });
-
-        lightbox.addEventListener("click", (e) => {
-          if (e.target === lightbox) {
-            lightbox.style.display = "none";
-          }
-        });
-      });
-    </script>
+    <!-- Script JS -->
+    <script src="js/portfolio.js"></script>
   </body>
 </html>
