@@ -92,25 +92,33 @@ nav a {
 
 /* Correction du menu déroulant pour qu'il ne casse pas la ligne */
 .menu-deroulant {
-    position: relative;
-    display: flex;
-    align-items: center;
-}
+    position: relative; /* Position relative pour le menu déroulant */
+    display: inline-block; /* Affichage en ligne */
+  }
 
-.menu-deroulant .sous-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: white;
-    min-width: 160px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    padding: 10px 0;
-}
-
-.menu-deroulant:hover .sous-menu {
-    display: block;
-}
+  .menu-deroulant .sous-menu {
+    display: none; /* Masque le sous-menu par défaut */
+    position: absolute; /* Position absolue pour le sous-menu */
+    background-color: white; /* Fond blanc */
+    min-width: 180px; /* Largeur minimale du sous-menu */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Ombre portée */
+    z-index: 1000; /* Placer au-dessus des autres éléments */
+  }
+  
+  .menu-deroulant .sous-menu a {
+    display: block; /* Affichage en bloc pour les liens du sous-menu */
+    padding: 10px 15px; /* Espacement interne */
+    text-decoration: none;  /* Pas de soulignement */
+    color: #333; /* Couleur du texte */
+  }
+  
+  .menu-deroulant .sous-menu a:hover {
+    background-color: #f1f1f1; /* Fond gris clair au survol */
+  }
+  
+  .menu-deroulant:hover .sous-menu {
+    display: block; /* Affiche le sous-menu au survol */
+  }
 
   /* ===== SECTIONS GÉNÉRALES ===== */
   section {
@@ -344,6 +352,7 @@ nav a.active {
     font-weight: bold;
     color: #a5b4fc; /* couleur douce ou personnalisée */
 }
+
 
 
 
