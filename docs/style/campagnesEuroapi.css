@@ -65,13 +65,13 @@ nav {
     justify-content: space-between;
 }
 
-/* C'EST CETTE DIV QU'IL FAUT FIXER */
 /* Elle contient Accueil, Créations et À propos */
 nav > div {
     display: flex;         /* Aligne les liens horizontalement */
     flex-direction: row;   /* Force la ligne */
     align-items: center;
     gap: 30px;             /* Crée un espace propre entre chaque mot */
+    justify-content: flex-end;
 }
 
 /* Style des liens */
@@ -344,6 +344,7 @@ nav a.active {
     font-weight: bold;
     color: #a5b4fc; /* couleur douce ou personnalisée */
 }
+
 
 
 
