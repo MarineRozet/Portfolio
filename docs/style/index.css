@@ -86,84 +86,85 @@ em {
 
 /* ===== HEADER ET NAVIGATION ===== */
 header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: white;
-  z-index: 1000;
-  padding: 1em 2em;
-}
-
-footer,
-nav {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-}
-
-nav a {
-  margin: 0 2em;
-}
-
-.lien-icone {
-  margin-left: 0.1em;
-}
-
-.lien-icone:hover {
-  opacity: 0.7;
-}
-
-.menu-deroulant {
-  position: relative;
-  display: inline-block;
-}
-
-.menu-deroulant .sous-menu {
-  display: none;
-  position: absolute;
-  background-color: white;
-  min-width: 180px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
-}
-
-.menu-deroulant:hover .sous-menu {
-  display: block;
-}
-
-.menu-deroulant .sous-menu a {
-  display: block;
-  padding: 0.5em;
-  margin-top: 0.8em;
-  color: #1f2039;
-}
-
-.menu-deroulant .sous-menu a:hover {
-  background-color: #f1f1f1;
-}
-
-.Logoheader,
-.Logofooter {
-  max-height: 50px;
-  height: 100%;
-}
-
-footer {
-  background-color: #03041b;
-  padding: 1em 2em;
-  width: 100%;
-  max-height: 80px;
-}
-
-.copyright {
-  color: white;
-  font-size: 0.8em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 3em;
-}
+    position: fixed; /* Fixe le header en haut */
+    top: 0; /* En haut de la page */
+    width: 100%; /* S'étend sur toute la largeur */
+    background-color: white; /* Fond blanc */
+    z-index: 1000; /* Placer au-dessus du reste */
+    padding: 1em 2em; /* Espacement interne */
+  
+  }
+  
+  .menu-deroulant {
+    position: relative; /* Position relative pour le menu déroulant */
+    display: inline-block; /* Affichage en ligne */
+  }
+  
+  .menu-deroulant .sous-menu {
+    display: none; /* Masque le sous-menu par défaut */
+    position: absolute; /* Position absolue pour le sous-menu */
+    background-color: white; /* Fond blanc */
+    min-width: 180px; /* Largeur minimale du sous-menu */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Ombre portée */
+    z-index: 1000; /* Placer au-dessus des autres éléments */
+  }
+  
+  .menu-deroulant .sous-menu a {
+    display: block; /* Affichage en bloc pour les liens du sous-menu */
+    padding: 10px 15px; /* Espacement interne */
+    text-decoration: none;  /* Pas de soulignement */
+    color: #333; /* Couleur du texte */
+  }
+  
+  .menu-deroulant .sous-menu a:hover {
+    background-color: #f1f1f1; /* Fond gris clair au survol */
+  }
+  
+  .menu-deroulant:hover .sous-menu {
+    display: block; /* Affiche le sous-menu au survol */
+  }
+  
+  
+  .Logofooter {
+    max-height: 50px; /* Ajuste la taille de l'image */
+    height: 100%; /* S'adapte à la hauteur du header */
+  }
+  
+  .Logoheader {
+    max-height: 50px; /* Ajuste la taille de l'image */
+    height: 100%; /* S'adapte à la hauteur du header */
+  }
+  
+  footer {
+    background-color: #03041b; /* Fond foncé pour le footer */
+    padding: 1em 2em; /* Espacement interne */
+    bottom: 0; /* Fixe le footer en bas */
+    width: 100%; /* S'étend sur toute la largeur */
+    max-height: 80px; /* Ajuste la hauteur maximale */
+    height: 100px; /* Hauteur fixe */
+  }
+  
+  /* ===== NAVIGATION ===== */
+  footer,
+  nav {
+    display: flex; /* Utilisation de flexbox pour une disposition souple */
+    flex-direction: row; /* Disposition horizontale des éléments */
+    align-items: center; /* Centrage vertical des éléments */
+    justify-content: space-between; /* Espacement entre les éléments */
+  }
+  
+  nav a {
+    margin-right: 2em; /* Espacement à droite des liens */
+    margin-left: 2em; /* Espacement à gauche des liens */
+  }
+  
+  .lien-icone {
+    margin-left: 0.1em; /* Espacement spécifique pour les icônes */
+  }
+  
+  .lien-icone:hover {
+    opacity: 0.7; /* Effet de transparence au survol */
+  }
 
 /* ===== BOUTONS ===== */
 .cta {
@@ -612,6 +613,7 @@ input[type="submit"] {
     right: 1em;
   }
 }
+
 
 
 
