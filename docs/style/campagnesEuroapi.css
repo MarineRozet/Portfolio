@@ -45,7 +45,7 @@ a:hover {
 header {
     position: fixed;
     top: 0;
-    left: 0;
+    left: 70;
     width: 100%;
     background-color: white;
     z-index: 1000;
@@ -344,6 +344,7 @@ nav a.active {
     font-weight: bold;
     color: #a5b4fc; /* couleur douce ou personnalisée */
 }
+
 
 
 
