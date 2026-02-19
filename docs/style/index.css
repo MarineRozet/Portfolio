@@ -208,20 +208,28 @@ footer {
 }
 
 .accueil-introduction div {
-  padding-right: 1em;
+    padding-right: 1em;
+    flex: 1;
+    display: flex;
+    flex-direction: column; /* Aligne les éléments verticalement */
+    align-items: center;    /* CENTRE le titre, le texte et le bouton horizontalement */
+    justify-content: center;
 }
 
 .accueil-introduction h1 {
-  margin-top: 1.5em;
-  font-size: 3.5em;
+    margin-top: 1.5em;
+    font-size: 3.5em;
+    text-align: center; /* Force le centrage du titre */
 }
 
 .accueil-introduction p {
-  font-size: 1.2em;
-  color: #ffffff;
-  text-align: justify;
-  width: 85%;
-  padding-bottom: 1.5em;
+    font-size: 1.2em;
+    color: #ffffff;
+    text-align: center; /* Change "justify" par "center" pour l'harmonie */
+    width: 85%;
+    max-width: 700px;   /* Ajout pour éviter que le texte ne s'étale trop */
+    padding-bottom: 1.5em;
+    margin: 0 auto;     /* Centre le bloc p lui-même */
 }
 
 .accueil-introduction img {
@@ -581,3 +589,4 @@ input[type="submit"] {
     right: 1em;
   }
 }
+
