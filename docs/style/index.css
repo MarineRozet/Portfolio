@@ -237,8 +237,12 @@ footer {
   max-width: 300px;
   aspect-ratio: 1/1.2;
   object-fit: cover;
-  margin-top: 5em;
   border-radius: 10px;
+  
+  /* AJUSTEMENTS DE POSITION */
+  margin-top: 7em;      /* Augmenté (était à 5em) pour descendre la photo */
+  margin-right: 2em;    /* Ajoute de l'espace à droite pour décaler la photo vers la gauche */
+  margin-left: 1em;     /* Optionnel : équilibre l'espace avec le texte */
 }
 
 .accueil-campagnes {
@@ -590,5 +594,6 @@ input[type="submit"] {
     right: 1em;
   }
 }
+
 
 
