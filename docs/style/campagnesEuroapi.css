@@ -98,7 +98,7 @@ header {
     bottom: 0; /* Fixe le footer en bas */
     width: 100%; /* S'étend sur toute la largeur */
     max-height: 80px; /* Ajuste la hauteur maximale */
-    height: 100px; /* Hauteur fixe */
+    height: 100%; /* S'étend sur toute la hauteur */
   }
   
   /* ===== NAVIGATION ===== */
@@ -355,4 +355,5 @@ nav a.active {
     font-weight: bold;
     color: #a5b4fc; /* couleur douce ou personnalisée */
 }
+
 
