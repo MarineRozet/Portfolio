@@ -12,7 +12,10 @@ body {
   background-color: #1f2039;
 }
 
-html, main {
+html,
+main {
+  margin: 0;
+  padding: 0;
   overflow-x: hidden;
 }
 
@@ -20,73 +23,146 @@ section {
   padding: 0.8em;
 }
 
-/* ===== HEADER ET NAVIGATION (CORRIGÉ) ===== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===== TYPOGRAPHIE ===== */
+h1,
+h2,
+p,
+li {
+  text-align: center;
+  color: #f9f8ff;
+}
+
+h1 {
+  font-size: 3.5em;
+  font-family: "Montserrat", sans-serif;
+  color: #a5b4fc;
+  margin: 2em 0 1em 0;
+}
+
+h2 {
+  font-size: 2em;
+  color: #a5b4fc;
+  margin: 0.6em 0 0.4em 0;
+}
+
+p,
+li {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+a {
+  color: #242424;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+nav a.active {
+  font-weight: bold;
+  color: #a5b4fc;
+}
+
+.portfolio-section a {
+  color: #a5b4fc;
+}
+
+.portfolio-section a:hover {
+  color: #8788ba;
+}
+
+em {
+  color: #a5b4fc;
+  font-style: normal;
+}
+
+/* ===== HEADER ET NAVIGATION ===== */
 header {
   position: fixed;
   top: 0;
   width: 100%;
   background-color: white;
   z-index: 1000;
-  padding: 0.5em 2em;
-  display: flex;
-  justify-content: space-between; /* Logo à gauche, Nav à droite */
-  align-items: center;
-  height: 70px; /* Hauteur fixe pour plus de stabilité */
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 1em 2em;
 }
 
+footer,
 nav {
   display: flex;
-  align-items: center;
-}
-
-.nav-links {
-  display: flex;
   flex-direction: row;
-  list-style: none;
-  gap: 2em; /* Espace entre les liens */
+  align-items: center;
+  justify-content: space-between;
 }
 
-.nav-links a {
-  color: #1f2039;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s;
+nav a {
+  margin: 0 2em;
 }
 
-.nav-links a:hover, nav a.active {
-  color: #a5b4fc;
+.lien-icone {
+  margin-left: 0.1em;
 }
 
-.Logoheader {
-  max-height: 50px;
-  width: auto;
+.lien-icone:hover {
+  opacity: 0.7;
 }
 
-/* ===== MENU DÉROULANT ===== */
 .menu-deroulant {
   position: relative;
+  display: inline-block;
 }
 
-.sous-menu {
+.menu-deroulant .sous-menu {
   display: none;
   position: absolute;
-  top: 100%;
-  left: 0;
   background-color: white;
   min-width: 180px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-  padding: 0.5em 0;
-  border-radius: 4px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
 }
 
 .menu-deroulant:hover .sous-menu {
   display: block;
 }
 
-.sous-menu a {
-  padding: 0.5em 1em;
+.menu-deroulant .sous-menu a {
   display: block;
+  padding: 0.5em;
+  margin-top: 0.8em;
+  color: #1f2039;
+}
+
+.menu-deroulant .sous-menu a:hover {
+  background-color: #f1f1f1;
+}
+
+.Logoheader,
+.Logofooter {
+  max-height: 50px;
+  height: 100%;
+}
+
+footer {
+  background-color: #03041b;
+  padding: 1em 2em;
+  width: 100%;
+  max-height: 80px;
+}
+
+.copyright {
+  color: white;
+  font-size: 0.8em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3em;
 }
 
 /* ===== BOUTONS ===== */
@@ -95,107 +171,449 @@ nav {
   background: linear-gradient(#8e86b5, #acaeed);
   color: white;
   border-radius: 50px;
-  padding: 0.7em 1.8em;
-  text-decoration: none;
-  margin: 1em auto;
-  transition: transform 0.3s;
+  padding: 0.5em 1.5em;
+  font-size: 1em;
+  margin-bottom: 2em;
+  align-self: center;
 }
 
 .cta:hover {
-  transform: scale(1.05);
+  background: linear-gradient(#181044, #2d2d3b);
+  text-decoration: none;
 }
 
-/* ===== SECTION INTRODUCTION (ACCUEIL) ===== */
+.back-to-top {
+  position: fixed;
+  bottom: 0.5em;
+  right: 0.5em;
+  background: #a5b4fc;
+  color: white;
+  padding: 0.7em 1em;
+  border-radius: 50%;
+  font-size: 1.3em;
+  z-index: 999;
+  transition: background 0.3s;
+}
+
+.back-to-top:hover {
+  background: #8788ba;
+}
+
+/* ===== SECTIONS SPÉCIFIQUES ===== */
 .accueil-introduction {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  max-width: 1200px;
-  margin: 100px auto 2em auto; /* 100px pour ne pas être sous le header */
-  padding: 0 20px;
+  max-width: 1300px;
+  margin: 3em auto 1em auto;
 }
 
 .accueil-introduction div {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+    padding-right: 1em;
+    flex: 1;
+    display: flex;
+    flex-direction: column; /* Aligne les éléments verticalement */
+    align-items: center;    /* CENTRE le titre, le texte et le bouton horizontalement */
+    justify-content: center;
 }
 
 .accueil-introduction h1 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 3.5em;
-  color: #a5b4fc;
-  margin-bottom: 0.5em;
+    margin-top: 1.5em;
+    font-size: 3.5em;
+    text-align: center; /* Force le centrage du titre */
 }
 
 .accueil-introduction p {
-  color: white;
-  max-width: 650px;
-  line-height: 1.6;
+    font-size: 1.2em;
+    color: #ffffff;
+    text-align: center; /* Change "justify" par "center" pour l'harmonie */
+    width: 85%;
+    max-width: 700px;   /* Ajout pour éviter que le texte ne s'étale trop */
+    padding-bottom: 1.5em;
+    margin: 0 auto;     /* Centre le bloc p lui-même */
 }
 
 .accueil-introduction img {
   max-width: 300px;
-  border-radius: 15px;
-  margin-top: 6em;  /* Descendu */
-  margin-right: 3em; /* Décalé à gauche */
+  aspect-ratio: 1/1.2;
+  object-fit: cover;
+  border-radius: 10px;
+  
+  /* AJUSTEMENTS DE POSITION */
+  margin-top: 7em;      /* Augmenté (était à 5em) pour descendre la photo */
+  margin-right: 2em;    /* Ajoute de l'espace à droite pour décaler la photo vers la gauche */
+  margin-left: 1em;     /* Optionnel : équilibre l'espace avec le texte */
 }
 
-/* ===== SECTION PROJETS PHARES ===== */
 .accueil-campagnes {
   background-color: #eef0f3;
-  padding: 4em 2em;
+  padding: 3em 5%;
   display: flex;
-  flex-direction: row-reverse;
   align-items: center;
   justify-content: center;
-  gap: 2em;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
 }
 
+/* Modification du conteneur de texte pour centrer son contenu */
 .textcontainer {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+    flex: 1;
+    width: 100%;
+    max-width: 800px; /* On réduit un peu la largeur pour le centrage */
+    
+    /* On active le flexbox vertical pour centrer les éléments */
+    display: flex;
+    flex-direction: column;
+    align-items: center;    /* Centre horizontalement le titre, le texte et le bouton */
+    justify-content: center;
+    text-align: center;     /* Centre les lignes de texte */
+    padding: 2em;
 }
 
-.textcontainer h1, .textcontainer p {
-  color: #1f2039;
+/* On s'assure que le titre et le paragraphe ignorent les anciens alignements à gauche */
+.textcontainer h1, 
+.textcontainer p {
+    color: #1f2039;
+    text-align: center;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.textcontainer p {
+    max-width: 600px; /* Pour une meilleure lisibilité une fois centré */
+    margin-bottom: 2em;
 }
 
 .video-container {
   flex: 1;
+  max-width: 1000px;
+  width: 100%;
+  padding: 0;
+  margin-top: 0.1em;
 }
 
 .video-container video {
-  width: 100%;
+  width: 80%;
+  height: auto;
+  max-width: 100%;
+  max-height: 400px;
   border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* ===== FOOTER ===== */
-footer {
-  background-color: #03041b;
+.section-contact h2 {
+  color: #a5b4fc;
+  margin: 2.5em 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px;
+  width: 100%;
+  margin: auto;
   color: white;
-  padding: 2em;
-  text-align: center;
 }
 
-/* ===== RESPONSIVE ===== */
-.burger { display: none; font-size: 2em; cursor: pointer; }
+.form-nom-email {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
 
+.form-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+input,
+textarea {
+  padding: 15px;
+  border-radius: 3px;
+  border: none;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+input[type="submit"] {
+  width: 200px;
+  margin: 30px auto 0 auto;
+}
+
+/* ===== BURGER MENU STYLES ===== */
+.burger {
+  display: none;
+  font-size: 2em;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #1f2039;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2em;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* --- Grand format tablette (max-width 996px) --- */
 @media screen and (max-width: 996px) {
-  .accueil-introduction {
+  /* ===== HEADER ===== */
+  header {
+    padding: 0.5em 1em; /* Header plus fin */
+  }
+
+  nav {
+    flex-direction: row;
+  }
+
+  nav a {
+    margin: 0.5em 0;
+  }
+
+  /* ===== MENU BURGER ===== */
+  .burger {
+    display: block;
+    position: absolute;
+    top: 1em;
+    right: 1.2em;
+    z-index: 1001;
+    background: none;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+    color: #1f2039;
+  }
+
+  .nav-links {
+    display: none;
     flex-direction: column;
+    align-items: flex-start;
+    background: white;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    padding: 1em;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease; /* Animation douce */
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links a {
+    margin: 1em 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* ===== ACCUEIL INTRODUCTION ===== */
+  .accueil-introduction {
+    flex-direction: row; /* Toujours en ligne */
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 6em; /* Ajuste pour pas cacher sous header */
+  }
+
+  .accueil-introduction div,
+  .accueil-introduction img {
+    flex: 1 1 45%;
+    margin: 1em;
+    max-width: 90%;
+  }
+
+  .accueil-introduction p {
+    width: 100%;
+    text-align: justify;
+  }
+
+  .accueil-introduction img {
+    max-width: 250px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  /* ===== ACCUEIL CAMPAGNES ===== */
+  .accueil-campagnes {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2em;
+  }
+
+  .textcontainer,
+  .video-container {
+    flex: 1 1 45%;
+    margin: 1em;
+    max-width: 90%;
+    text-align: left;
+  }
+
+  .video-container video {
+    width: 100%;
+    max-height: 300px;
+  }
+
+  /* ===== SECTION CONTACT ===== */
+  .section-contact h2 {
+    text-align: center;
+    font-size: 2em;
+  }
+
+  form {
+    width: 90%;
+    margin: auto;
+  }
+
+  .form-nom-email {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1em;
+  }
+
+  input,
+  textarea {
+    width: 100%; /* Champs prennent toute la largeur */
+  }
+
+  input[type="submit"] {
+    width: 200px;
+    margin: 30px auto 0 auto;
+  }
+}
+
+/* --- Petite tablette : max-width 768px --- */
+@media screen and (max-width: 768px) {
+  /* HEADER */
+  header {
+    padding: 0.5em 1em;
+  }
+
+  .Logoheader {
+    max-height: 40px;
+  }
+
+  /* BURGER */
+  .burger {
+    font-size: 2em;
+  }
+
+  /* ACCUEIL INTRO */
+  .accueil-introduction {
+    margin-top: 7em;
+  }
+
+  .accueil-introduction div,
+  .accueil-introduction img {
+    flex: 1 1 90%;
+    max-width: 100%;
+  }
+
+  /* CAMPAGNES */
+  .textcontainer,
+  .video-container {
+    flex: 1 1 90%;
+  }
+
+  .video-container video {
+    max-height: 250px;
+  }
+
+  /* FORMULAIRE */
+  form {
+    padding: 0 1em;
+  }
+}
+
+/* --- Mobile : max-width 480px --- */
+@media screen and (max-width: 480px) {
+  /* HEADER */
+  header {
+    padding: 0.5em;
+  }
+
+  .Logoheader {
+    max-height: 2em;
+  }
+
+  /* NAVIGATION */
+  .burger {
+    font-size: 2em;
+  }
+
+  .nav-links {
+    padding: 0.8em;
+  }
+
+  nav a {
+    font-size: 1em;
+  }
+
+  /* INTRO */
+  .accueil-introduction {
+    margin-top: 1em;
+  }
+
+  .accueil-introduction div,
+  .accueil-introduction img {
+    flex: 1 1 100%;
+  }
+
+  /* VIDEO */
+  .video-container video {
+    max-height: 200px;
+    height: 100%;
+  }
+
+  .cta {
+    margin-top: 1.5em;
+    margin-left: 15%;
+  }
+
+  /* FORM */
+  input,
+  textarea {
+    font-size: 1em;
+    margin-bottom: 1em;
+  }
+
+  input[type="submit"] {
+    width: 100%;
+  }
+
+  /* FOOTER */
+  footer {
+    flex-direction: row;
     align-items: center;
   }
-  
-  .accueil-introduction img {
-    margin: 2em 0;
+
+  .copyright {
+    font-size: 0.7em;
+    margin-top: 1em;
   }
 
-  .burger { display: block; }
-  .nav-links { display: none; } /* À gérer avec JS pour le toggle */
+  /* BOUTON RETOUR HAUT */
+  .back-to-top {
+    font-size: 1em;
+    padding: 0.5em;
+    bottom: 1em;
+    right: 1em;
+  }
 }
+
+
+
+
+
