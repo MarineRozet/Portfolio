@@ -255,16 +255,34 @@ footer {
   flex-direction: row-reverse;
 }
 
+/* Modification du conteneur de texte pour centrer son contenu */
 .textcontainer {
-  flex: 1;
-  width: 100%;
-  max-width: 3000px;
-  text-align: left;
+    flex: 1;
+    width: 100%;
+    max-width: 800px; /* On réduit un peu la largeur pour le centrage */
+    
+    /* On active le flexbox vertical pour centrer les éléments */
+    display: flex;
+    flex-direction: column;
+    align-items: center;    /* Centre horizontalement le titre, le texte et le bouton */
+    justify-content: center;
+    text-align: center;     /* Centre les lignes de texte */
+    padding: 2em;
 }
 
-.textcontainer h1,
+/* On s'assure que le titre et le paragraphe ignorent les anciens alignements à gauche */
+.textcontainer h1, 
 .textcontainer p {
-  color: #1f2039;
+    color: #1f2039;
+    text-align: center;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.textcontainer p {
+    max-width: 600px; /* Pour une meilleure lisibilité une fois centré */
+    margin-bottom: 2em;
 }
 
 .video-container {
@@ -594,6 +612,7 @@ input[type="submit"] {
     right: 1em;
   }
 }
+
 
 
 
