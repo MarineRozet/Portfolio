@@ -261,7 +261,7 @@ main {
 }
 
 .section-pair .media img {
-    width: 100%;         /* Agrandit l'image à la taille maximale de son conteneur */
+    width: 80%;         /* Agrandit l'image à la taille maximale de son conteneur */
     max-width: 600px;    /* Limite la taille de l'image pour éviter les débordements */
     height: auto;
     border-radius: 10px;
@@ -394,6 +394,7 @@ nav a.active {
     font-weight: bold;
     color: #a5b4fc; /* couleur douce ou personnalisée */
 }
+
 
 
 
