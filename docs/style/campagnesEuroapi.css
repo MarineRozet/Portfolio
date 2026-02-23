@@ -5,40 +5,83 @@
     box-sizing: border-box;
 }
 
-/* POLICES ET COULEURS GÉNÉRALES */
+/* ===== BASE DU SITE ===== */
 body {
-    font-family: 'Manrope', sans-serif;
-    font-size: 1em;
-    background-color: #1f2039;
-    color: #f9f8ff;
+  font-family: "Manrope", sans-serif;
+  font-size: 1em;
+  background-color: #1f2039;
+}
+
+html,
+main {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+section {
+  padding: 0.8em;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===== TYPOGRAPHIE ===== */
+h1,
+h2,
+p,
+li {
+  text-align: center;
+  color: #f9f8ff;
 }
 
 h1 {
-    font-size: 2.5em;
-    color: #a5b4fc;
-    margin-bottom: 20px;
-    font-family: 'Montserrat', sans-serif;
+  font-size: 3.5em;
+  font-family: "Montserrat", sans-serif;
+  color: #a5b4fc;
+  margin: 2em 0 1em 0;
 }
 
 h2 {
-    font-size: 1.5em;
-    color: #a5b4fc;
-    margin: 30px 0 10px;
+  font-size: 2em;
+  color: #a5b4fc;
+  margin: 0.6em 0 0.4em 0;
 }
 
-p {
-    font-size: 1.1em;
-    line-height: 1.6;
-    color: #f9f8ff;
+p,
+li {
+  font-size: 1.1em;
+  line-height: 1.6;
 }
 
 a {
-    color: #242424;
-    text-decoration: none;
+  color: #242424;
+  text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
+}
+
+nav a.active {
+  font-weight: bold;
+  color: #a5b4fc;
+}
+
+.portfolio-section a {
+  color: #a5b4fc;
+}
+
+.portfolio-section a:hover {
+  color: #8788ba;
+}
+
+em {
+  color: #a5b4fc;
+  font-style: normal;
 }
 
 /* ===== HEADER & NAVIGATION (VERSION STABLE) ===== */
@@ -90,12 +133,11 @@ nav a {
     display: block;
 }
 
-/* Correction du menu déroulant pour qu'il ne casse pas la ligne */
-.menu-deroulant {
+ .menu-deroulant {
     position: relative; /* Position relative pour le menu déroulant */
     display: inline-block; /* Affichage en ligne */
   }
-
+  
   .menu-deroulant .sous-menu {
     display: none; /* Masque le sous-menu par défaut */
     position: absolute; /* Position absolue pour le sous-menu */
@@ -352,6 +394,7 @@ nav a.active {
     font-weight: bold;
     color: #a5b4fc; /* couleur douce ou personnalisée */
 }
+
 
 
 
