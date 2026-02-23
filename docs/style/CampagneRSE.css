@@ -1,0 +1,202 @@
+/* RESET DE BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* POLICES ET COULEURS GÉNÉRALES */
+body {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1em;
+    background-color: #1f2039;
+    color: #f9f8ff;
+    flex-wrap: wrap;
+}
+
+h1 {
+    color: #a5b4fc;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.5em;
+    color: #a5b4fc;
+    margin: 30px 0 10px;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #f9f8ff;
+}
+
+a {
+    color: #242424;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ===== HEADER & FOOTER ===== */
+header {
+    position: fixed; /* Fixe le header en haut */
+    top: 0; /* En haut de la page */
+    width: 100%; /* S'étend sur toute la largeur */
+    background-color: white; /* Fond blanc */
+    z-index: 1000; /* Placer au-dessus du reste */
+    padding: 1em 2em; /* Espacement interne */
+}
+
+.menu-deroulant {
+    position: relative; /* Position relative pour le menu déroulant */
+    display: inline-block; /* Affichage en ligne */
+}
+
+.menu-deroulant .sous-menu {
+    display: none; /* Masque le sous-menu par défaut */
+    position: absolute; /* Position absolue pour le sous-menu */
+    background-color: white; /* Fond blanc */
+    min-width: 180px; /* Largeur minimale du sous-menu */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Ombre portée */
+    z-index: 1000; /* Placer au-dessus des autres éléments */
+}
+
+.menu-deroulant .sous-menu a {
+    display: block; /* Affichage en bloc pour les liens du sous-menu */
+    padding: 10px 15px; /* Espacement interne */
+    text-decoration: none;  /* Pas de soulignement */
+    color: #333; /* Couleur du texte */
+}
+
+.menu-deroulant .sous-menu a:hover {
+    background-color: #f1f1f1; /* Fond gris clair au survol */
+}
+
+.menu-deroulant:hover .sous-menu {
+    display: block; /* Affiche le sous-menu au survol */
+}
+
+
+.Logofooter {
+    max-height: 50px; /* Ajuste la taille de l'image */
+    height: 100%; /* S'adapte à la hauteur du header */
+}
+
+.Logoheader {
+    max-height: 50px; /* Ajuste la taille de l'image */
+    height: 100%; /* S'adapte à la hauteur du header */
+}
+
+footer {
+    background-color: #03041b; /* Fond foncé pour le footer */
+    padding: 1em 2em; /* Espacement interne */
+    bottom: 0; /* Fixe le footer en bas */
+    width: 100%; /* S'étend sur toute la largeur */
+    max-height: 80px; /* Ajuste la hauteur maximale */
+    height: 100%; /* S'étend sur toute la hauteur */
+}
+
+  /* ===== NAVIGATION ===== */
+footer,
+nav {
+    display: flex; /* Utilisation de flexbox pour une disposition souple */
+    flex-direction: row; /* Disposition horizontale des éléments */
+    align-items: center; /* Centrage vertical des éléments */
+    justify-content: space-between; /* Espacement entre les éléments */
+}
+
+nav a {
+    margin-right: 2em; /* Espacement à droite des liens */
+    margin-left: 2em; /* Espacement à gauche des liens */
+}
+
+.lien-icone {
+    margin-left: 0.1em; /* Espacement spécifique pour les icônes */
+}
+
+.lien-icone:hover {
+    opacity: 0.7; /* Effet de transparence au survol */
+}
+
+/* CONTENU PRINCIPAL */
+main {
+    padding: 8%; /* Ajout de padding pour le contenu principal */
+    max-width: 65%; /* Limite la largeur du contenu principal */
+    margin: 0 auto;
+}
+
+/* STRUCTURE DE CHAQUE BLOC TEXTE + IMAGE/VIDÉO */
+.section-pair {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 5%;
+    gap: 5%;
+
+}
+
+.section-pair_reverse {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse ;
+    gap: 5%;
+    padding-top: 5%;
+}
+
+.section-pair img {
+    max-width: 800px;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.section-pair_reverse img {
+    max-width: 800px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.section-pair .texte {
+    flex: 1 1 45%;
+}
+
+.section-pair_reverse .texte {
+    flex: 1 1 45%;
+}
+
+
+/* BOUTON RETOUR EN HAUT */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #a5b4fc;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-size: 20px;
+    text-decoration: none;
+    z-index: 999;
+    transition: background 0.3s;
+}
+
+.back-to-top:hover {
+    background: #8788ba;
+}
+
+.copyright {
+    color: white; /* Couleur du texte */
+    text-align: center; /* Centrer le texte */
+    margin-top: 3em; /* Espacement au-dessus du texte */
+    margin-right: 42%; /* Espacement à droite */
+    font-size: 0.8em; /* Taille du texte */
+    display: flex; /* Active flexbox */
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+}
