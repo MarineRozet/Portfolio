@@ -193,7 +193,7 @@ main {
     display: flex; /* Active flexbox */
     justify-content: center; /* Centre horizontalement */
     align-items: center; /* Centre verticalement */
-  }
+}
 
 /* RESPONSIVE */
 @media screen and (max-width: 768px) {
